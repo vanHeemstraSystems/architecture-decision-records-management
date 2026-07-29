@@ -12,8 +12,20 @@ Create a file named `workspace.dsl` next to your folder of ADRs (here: `docs/arc
 Add the following content to that file.
 
 ```bash
-workspace {
+workspace "ADR Workspace" "Architecture Decision Records Management" {
     !adrs decisions
+    model {
+        user = person "User" "A user of the management platform."
+        softwareSystem = softwareSystem "Software System" "My primary application."
+        user -> softwareSystem "Uses"
+    }
+    views {
+        systemContext softwareSystem "SystemContext" {
+            include *
+            autoLayout
+        }
+        theme default
+    }
 }
 ```
 
@@ -21,24 +33,107 @@ This says, "create a workspace, and load the ADRs from the `decisions` sub-direc
 
 ## 2. Start Structurizr Lite
 
+Optional: Stop and remove the current stalled container
+```docker
+docker rm -f structurizr-local
+```
+
 Assuming that you have Docker installed, you can now start Structurizr Lite with the following commands:
 
 ```docker
-docker pull structurizr/lite
-docker run -it --rm -p 8080:8080 -v PATH:/usr/local/structurizr structurizr/lite
+docker run -d --name structurizr-local \
+  -p 8080:8080 \
+  -e SERVER_PORT=8080 \
+  -u "$(id -u):$(id -g)" \
+  -v PATH:/usr/local/structurizr \
+  structurizr/structurizr local
 ```
 
 Be sure to replace `PATH` with the full path to the directory containing your `workspace.dsl` file (here: `doc/architecture`). So:
 
 ```docker
-docker run -it --rm -p 8080:8080 -v /workspaces/architecture-decision-records-management/doc/architecture:/usr/local/structurizr structurizr/lite
+docker run -d --name structurizr-local \
+  -p 8080:8080 \
+  -e SERVER_PORT=8080 \
+  -u "$(id -u):$(id -g)" \
+  -v /workspaces/architecture-decision-records-management/doc/architecture:/usr/local/structurizr \
+  structurizr/structurizr local
 ```
+
+Check the System Container Logs.
+
+Before opening the web view, make sure the system initialized fully without crashing. Run this command:
+
+```bash
+docker logs structurizr-local
+```
+
+**What you want to see**: The logs should print standard application initialization lines and confirm it is listening for configurations. If you see a file permissions error instead, it means the directory `/doc/architecture` doesn't exist yet or has restricted rights.
 
 ## 3. Open Structurizr Lite
 
 Open the workspace in a web browser by heading to http://localhost:8080 and you should see your decisions.
 
 ![adr_list.png](./images/adr_list.png)
+
+NOTE: If you get the browser to tell you that it cannot open the page, notice The connection refusal happens because you are running the container inside GitHub Codespaces.
+
+When a service runs on port `8080` inside a virtual codespace environment, it cannot be accessed directly via your computer's local network at https://localhost:8080. Instead, GitHub routes it through a secure web proxy URL.
+
+1. The Immediate Fix (Expose the Port)
+
+You do not need to restart your docker container. Since it is already running, open your browser via Codespaces:
+
+1. Look at the bottom tray of your VS Code / Codespaces window and click on the **Ports** tab (next to Terminal).
+2. Look for port **8080**.
+3. Hover over the **Forwarded Address** column for port 8080 and click the **globe icon** (Open in Browser) or copy the URL.
+4. **Important Check**: Make sure the Port Visibility is set to Public or Private (but not blocked) by right-clicking the port row.
+
+---
+
+Here is a clear, concise summary of the problem and the working solution that you can paste directly into your project documentation or README file. [1, 2] 
+------------------------------
+## 📝 Documentation: Running Structurizr Lite inside GitHub Codespaces## ❌ The Problem
+When running the modern structurizr/structurizr Docker container inside GitHub Codespaces, the application serves traffic locally over unencrypted HTTP. However, GitHub Codespaces defaults to routing forwarded ports over secure HTTPS.
+This protocol mismatch causes the GitHub web proxy tunnel to fail behind the scenes, triggering either a 502 Bad Gateway error, a connection timeout, or a broken redirect back to a physical localhost loopback string. [3] 
+------------------------------
+## The Working Solution## 1. Launch the Container on an Unrestricted Port
+Run the container using an alternative development port (9090) and explicitly set the internal application port environment variable:
+
+docker run -d --name structurizr-local \
+  -p 9090:9090 \
+  -e PORT=9090 \
+  -v /workspaces/architecture-decision-records-management/doc/architecture:/usr/local/structurizr \
+  structurizr/structurizr local
+
+## 2. Configure the Network Port in Codespaces
+
+   1. Open the Ports tab in the bottom tray of VS Code / Codespaces.
+   2. Right-click on the row for port 9090.
+   3. Set Port Visibility to Public.
+   4. Set Port Protocol to HTTP.
+
+## 3. Access the Web Dashboard
+
+   1. In the Ports tab, hover over the Forwarded Address and click the Copy Address icon.
+   2. Open a fresh browser tab and paste the address into the URL bar.
+   3. Manually modify the beginning of the URL from https:// to http://.
+   4. Press Enter and click Continue on the GitHub warning page to open the workspace. [4] 
+
+------------------------------
+Now that your Structurizr environment is fully accessible, would you like to:
+
+* Configure workspace.dsl to auto-parse your adr-tools markdown folder
+* Create a shell script to automate this entire Docker setup on codespace startup
+
+
+[1] [https://experienceleague.adobe.com](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/help-and-legal/help-problem)
+[2] [https://bryankeane.medium.com](https://bryankeane.medium.com/watching-arbitrary-resources-in-kubernetes-9904ed91a649)
+[3] [https://lists.apache.org](https://lists.apache.org/thread/m7lh83xh7po68f20fwxlhsp6xkrz2902)
+[4] [https://cheapsslsecurity.com](https://cheapsslsecurity.com/blog/a-quick-guide-on-how-to-fix-mixed-content-wordpress-warnings/)
+
+
+---
 
 You can now click through the decisions, and press the Space key to open the quick navigation feature. Click the little graph button underneath the heading, and the visualisation will open.
 
