@@ -38,6 +38,10 @@ docker run -it --rm -p 8080:8080 -v /workspaces/architecture-decision-records-ma
 
 Open the workspace in a web browser by heading to http://localhost:8080 and you should see your decisions.
 
+![adr_list.png](./images/adr_list.png)
+
 You can now click through the decisions, and press the Space key to open the quick navigation feature. Click the little graph button underneath the heading, and the visualisation will open.
 
-MORE ...
+![adr_graph.png](./images/adr_graph.png)
+
+Over time, the graph will start to change to reflect how decisions have been superseded, deprecated, etc.
