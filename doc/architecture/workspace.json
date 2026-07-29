@@ -1,5 +1,7 @@
 {
-  "configuration" : { },
+  "configuration" : {
+    "scope" : "Landscape"
+  },
   "description" : "Architecture Decision Records Management",
   "documentation" : {
     "decisions" : [ {
@@ -26,7 +28,7 @@
     } ]
   },
   "id" : 1,
-  "lastModifiedDate" : "2026-07-29T13:53:58Z",
+  "lastModifiedDate" : "2026-07-29T14:28:04Z",
   "model" : {
     "people" : [ {
       "description" : "A user of the management platform.",
@@ -40,7 +42,8 @@
         "destinationId" : "2",
         "id" : "3",
         "sourceId" : "1",
-        "tags" : "Relationship"
+        "tags" : "Relationship",
+        "technology" : "Web Browser (HTTPS)"
       } ],
       "tags" : "Element,Person"
     } ],
@@ -57,7 +60,7 @@
   },
   "name" : "ADR Workspace",
   "properties" : {
-    "structurizr.inspection.error" : "2",
+    "structurizr.inspection.error" : "0",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"

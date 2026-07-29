@@ -262,3 +262,292 @@
 2026-07-29T13:53:58.517Z  WARN 1 --- [http-nio-9090-exec-7] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
 2026-07-29T13:53:58.742Z  WARN 1 --- [http-nio-9090-exec-10] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
 2026-07-29T13:53:58.743Z  WARN 1 --- [http-nio-9090-exec-8] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:13:59.098Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:13:59.143Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:17.773Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:18.067Z  WARN 1 --- [http-nio-9090-exec-8] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:18.090Z  WARN 1 --- [http-nio-9090-exec-8] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:18.277Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:18.278Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:23.125Z  WARN 1 --- [http-nio-9090-exec-5] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:23.141Z  WARN 1 --- [http-nio-9090-exec-5] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:23.654Z  WARN 1 --- [http-nio-9090-exec-7] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:28.228Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:28.248Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:37.690Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:37.937Z  WARN 1 --- [http-nio-9090-exec-6] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:37.957Z  WARN 1 --- [http-nio-9090-exec-6] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:38.047Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:38.056Z  WARN 1 --- [http-nio-9090-exec-7] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:42.270Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:42.282Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:48.958Z  WARN 1 --- [http-nio-9090-exec-6] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:48.960Z  WARN 1 --- [http-nio-9090-exec-2] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:49.072Z  WARN 1 --- [http-nio-9090-exec-1] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:16:49.075Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:07.473Z  WARN 1 --- [http-nio-9090-exec-10] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:07.504Z  WARN 1 --- [http-nio-9090-exec-10] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:08.649Z  WARN 1 --- [http-nio-9090-exec-2] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:08.655Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:08.771Z  WARN 1 --- [http-nio-9090-exec-8] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:08.769Z  WARN 1 --- [http-nio-9090-exec-6] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:10.280Z  WARN 1 --- [http-nio-9090-exec-1] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:10.579Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:10.663Z  WARN 1 --- [http-nio-9090-exec-9] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:10.779Z  WARN 1 --- [http-nio-9090-exec-8] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:10.782Z  WARN 1 --- [http-nio-9090-exec-10] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:13.794Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:13.804Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:13.823Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:17:13.834Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:23:17.418Z  WARN 1 --- [http-nio-9090-exec-1] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:23:17.436Z ERROR 1 --- [http-nio-9090-exec-1] c.s.s.w.w.a.InspectionsController        : com.structurizr.server.component.workspace.WorkspaceComponentException: com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"
+2026-07-29T14:23:17.444Z ERROR 1 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: com.structurizr.server.component.workspace.WorkspaceComponentException: com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"] with root cause
+
+com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"
+	at com.structurizr.dsl.StructurizrDslParser.parse(StructurizrDslParser.java:1369) ~[structurizr-dsl-6.2.2.jar!/:6.2.2]
+	at com.structurizr.dsl.StructurizrDslParser.parse(StructurizrDslParser.java:188) ~[structurizr-dsl-6.2.2.jar!/:6.2.2]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.loadWorkspaceFromDsl(LocalFileSystemWorkspaceAdapter.java:113) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.loadWorkspace(LocalFileSystemWorkspaceAdapter.java:68) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.getWorkspace(LocalFileSystemWorkspaceAdapter.java:151) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.WorkspaceComponentImpl.getWorkspace(WorkspaceComponentImpl.java:206) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.InspectionsController.lambda$showAuthenticatedInspections$4(InspectionsController.java:43) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.AbstractWorkspaceController.showAuthenticatedView(AbstractWorkspaceController.java:69) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.InspectionsController.showAuthenticatedInspections(InspectionsController.java:39) ~[!/:2026.06.28]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.55.jar!/:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar!/:6.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-07-29T14:23:29.657Z  WARN 1 --- [http-nio-9090-exec-2] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:23:29.662Z ERROR 1 --- [http-nio-9090-exec-2] c.s.s.w.w.a.InspectionsController        : com.structurizr.server.component.workspace.WorkspaceComponentException: com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"
+2026-07-29T14:23:29.665Z ERROR 1 --- [http-nio-9090-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: com.structurizr.server.component.workspace.WorkspaceComponentException: com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"] with root cause
+
+com.structurizr.dsl.StructurizrDslParserException: Identifiers can only contain the following characters: a-zA-Z0-9_- at line 4 of /usr/local/structurizr/workspace.dsl: structurizr.scope = "SoftwareSystem"
+	at com.structurizr.dsl.StructurizrDslParser.parse(StructurizrDslParser.java:1369) ~[structurizr-dsl-6.2.2.jar!/:6.2.2]
+	at com.structurizr.dsl.StructurizrDslParser.parse(StructurizrDslParser.java:188) ~[structurizr-dsl-6.2.2.jar!/:6.2.2]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.loadWorkspaceFromDsl(LocalFileSystemWorkspaceAdapter.java:113) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.loadWorkspace(LocalFileSystemWorkspaceAdapter.java:68) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.LocalFileSystemWorkspaceAdapter.getWorkspace(LocalFileSystemWorkspaceAdapter.java:151) ~[!/:2026.06.28]
+	at com.structurizr.server.component.workspace.WorkspaceComponentImpl.getWorkspace(WorkspaceComponentImpl.java:206) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.InspectionsController.lambda$showAuthenticatedInspections$4(InspectionsController.java:43) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.AbstractWorkspaceController.showAuthenticatedView(AbstractWorkspaceController.java:69) ~[!/:2026.06.28]
+	at com.structurizr.server.web.workspace.authenticated.InspectionsController.showAuthenticatedInspections(InspectionsController.java:39) ~[!/:2026.06.28]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.55.jar!/:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar!/:6.0.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.10.jar!/:6.5.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar!/:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-07-29T14:25:50.633Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:25:50.640Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:25:50.661Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:25:50.716Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:25:50.732Z  WARN 1 --- [http-nio-9090-exec-4] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:28:04.604Z  WARN 1 --- [http-nio-9090-exec-12] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:28:04.607Z  WARN 1 --- [http-nio-9090-exec-12] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:28:04.620Z  WARN 1 --- [http-nio-9090-exec-12] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:28:04.647Z  WARN 1 --- [http-nio-9090-exec-12] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:28:04.657Z  WARN 1 --- [http-nio-9090-exec-12] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:01.194Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:01.516Z  WARN 1 --- [http-nio-9090-exec-5] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:01.529Z  WARN 1 --- [http-nio-9090-exec-5] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:01.677Z  WARN 1 --- [http-nio-9090-exec-14] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:01.680Z  WARN 1 --- [http-nio-9090-exec-7] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:04.079Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json
+2026-07-29T14:30:04.088Z  WARN 1 --- [http-nio-9090-exec-3] com.structurizr.view.Configuration       : The Structurizr cloud service will reach its End of Life (EOL) on 30 September 2026 and this theme will not be available: https://static.structurizr.com/themes/default/theme.json

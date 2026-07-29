@@ -14,10 +14,13 @@ Add the following content to that file.
 ```bash
 workspace "ADR Workspace" "Architecture Decision Records Management" {
     !adrs decisions
+    configuration {
+      scope landscape
+    }
     model {
         user = person "User" "A user of the management platform."
         softwareSystem = softwareSystem "Software System" "My primary application."
-        user -> softwareSystem "Uses"
+        user -> softwareSystem "Uses" "Web Browser (HTTPS)"
     }
     views {
         systemContext softwareSystem "SystemContext" {
@@ -30,6 +33,8 @@ workspace "ADR Workspace" "Architecture Decision Records Management" {
 ```
 
 This says, "create a workspace, and load the ADRs from the `decisions` sub-directory".
+
+Documentation of `workspace.dsl` is at https://docs.structurizr.com/workspaces/scope
 
 ## 2. Start Structurizr Lite
 
