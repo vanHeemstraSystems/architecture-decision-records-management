@@ -1,2 +1,3 @@
-# architecture-decision-records-management
-Architecture Decision Records Management
+# Architecture Decision Records Management
+
+- [References](./REFERENCES.md)
