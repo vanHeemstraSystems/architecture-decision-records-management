@@ -89,49 +89,54 @@ You do not need to restart your docker container. Since it is already running, o
 3. Hover over the **Forwarded Address** column for port 8080 and click the **globe icon** (Open in Browser) or copy the URL.
 4. **Important Check**: Make sure the Port Visibility is set to Public or Private (but not blocked) by right-clicking the port row.
 
----
-
-Here is a clear, concise summary of the problem and the working solution that you can paste directly into your project documentation or README file. [1, 2] 
 ------------------------------
-## 📝 Documentation: Running Structurizr Lite inside GitHub Codespaces## ❌ The Problem
-When running the modern structurizr/structurizr Docker container inside GitHub Codespaces, the application serves traffic locally over unencrypted HTTP. However, GitHub Codespaces defaults to routing forwarded ports over secure HTTPS.
-This protocol mismatch causes the GitHub web proxy tunnel to fail behind the scenes, triggering either a 502 Bad Gateway error, a connection timeout, or a broken redirect back to a physical localhost loopback string. [3] 
-------------------------------
-## The Working Solution## 1. Launch the Container on an Unrestricted Port
-Run the container using an alternative development port (9090) and explicitly set the internal application port environment variable:
 
+## 📝 Running Structurizr Lite inside GitHub Codespaces
+
+### ❌ The Problem
+
+When running the modern structurizr/structurizr Docker container inside GitHub Codespaces, the application serves traffic locally over unencrypted **HTTP**. However, GitHub Codespaces defaults to routing forwarded ports over secure **HTTPS**.
+
+This protocol mismatch causes the GitHub web proxy tunnel to fail behind the scenes, triggering either a `502 Bad Gateway` error, a connection timeout, or a broken redirect back to a physical `localhost` loopback string.
+
+------------------------------
+
+### The Working Solution
+
+1. Launch the Container on an Unrestricted Port
+
+Run the container using an alternative development port (**9090**) and explicitly set the internal application port environment variable:
+
+```docker
 docker run -d --name structurizr-local \
   -p 9090:9090 \
   -e PORT=9090 \
   -v /workspaces/architecture-decision-records-management/doc/architecture:/usr/local/structurizr \
   structurizr/structurizr local
+```
 
-## 2. Configure the Network Port in Codespaces
-
+2. Configure the Network Port in Codespaces
+```
    1. Open the Ports tab in the bottom tray of VS Code / Codespaces.
    2. Right-click on the row for port 9090.
    3. Set Port Visibility to Public.
    4. Set Port Protocol to HTTP.
+```
 
-## 3. Access the Web Dashboard
-
+3. Access the Web Dashboard
+```
    1. In the Ports tab, hover over the Forwarded Address and click the Copy Address icon.
    2. Open a fresh browser tab and paste the address into the URL bar.
    3. Manually modify the beginning of the URL from https:// to http://.
-   4. Press Enter and click Continue on the GitHub warning page to open the workspace. [4] 
+   4. Press Enter and click Continue on the GitHub warning page to open the workspace.
+```
 
 ------------------------------
+
 Now that your Structurizr environment is fully accessible, would you like to:
 
 * Configure workspace.dsl to auto-parse your adr-tools markdown folder
 * Create a shell script to automate this entire Docker setup on codespace startup
-
-
-[1] [https://experienceleague.adobe.com](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/help-and-legal/help-problem)
-[2] [https://bryankeane.medium.com](https://bryankeane.medium.com/watching-arbitrary-resources-in-kubernetes-9904ed91a649)
-[3] [https://lists.apache.org](https://lists.apache.org/thread/m7lh83xh7po68f20fwxlhsp6xkrz2902)
-[4] [https://cheapsslsecurity.com](https://cheapsslsecurity.com/blog/a-quick-guide-on-how-to-fix-mixed-content-wordpress-warnings/)
-
 
 ---
 
