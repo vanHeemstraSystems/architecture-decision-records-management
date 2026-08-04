@@ -1,3 +1,6 @@
+---
+status: "Accepted"
+---
 # 2. Implement as Unix shell scripts
 
 Date: 2026-07-29
