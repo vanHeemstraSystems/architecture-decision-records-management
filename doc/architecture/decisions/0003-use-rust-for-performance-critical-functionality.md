@@ -1,3 +1,6 @@
+---
+status: "Accepted"
+---
 # 3. Use Rust for performance-critical functionality
 
 Date: 2026-07-29
