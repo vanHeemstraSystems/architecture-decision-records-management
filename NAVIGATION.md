@@ -73,5 +73,27 @@ spacerizr workspace.dsl --export svg --theme light
 spacerizr decisions/ --export svg   # exports all files
 ```
 
+## Keyboard Shortcuts
+
+| Key | Action |
+| --- | --- |
+| ? | Show this help |
+| P | Enter presentation mode |
+| F | Zoom to fit |
+| Backspace | Go up one level |
+| Click | Drill into element |
+| Scroll | Zoom in/out |
+| Drag | Rotate (3D) / Pan (2D) |
+| Ctrl+V | Paste DSL content |
+| / | Search |
+
+In Presentation Mode:
+
+| Key | Action |
+| --- | --- |
+| ← → | Previous / Next slide |
+| L | Toggle laser pointer |
+| Esc | Exit presentation |
+
 
 MORE
