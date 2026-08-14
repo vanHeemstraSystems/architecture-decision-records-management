@@ -1,6 +1,7 @@
 ---
 status: "Accepted"
 ---
+
 # 1. Record architecture decisions
 
 Date: 2026-07-29

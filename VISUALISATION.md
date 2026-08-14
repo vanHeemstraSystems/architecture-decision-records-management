@@ -48,10 +48,10 @@ Assuming that you have Docker installed, you can now start Structurizr Lite with
 ```docker
 docker run -d --name structurizr-local \
   -p 8080:8080 \
-  -e SERVER_PORT=8080 \
-  -u "$(id -u):$(id -g)" \
-  -v PATH:/usr/local/structurizr \
-  structurizr/structurizr local
+    -e SERVER_PORT=8080 \
+      -u "$(id -u):$(id -g)" \
+        -v PATH:/usr/local/structurizr \
+          structurizr/structurizr local
 ```
 
 Be sure to replace `PATH` with the full path to the directory containing your `workspace.dsl` file (here: `doc/architecture`). So:

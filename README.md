@@ -10,3 +10,4 @@
 2. [Quick Start](./QUICK_START.md)
 3. [Visualisation](./VISUALISATION.md)
 4. [Navigation](./NAVIGATION.md)  
+5. [Sites](./SITES.md)
