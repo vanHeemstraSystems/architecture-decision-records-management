@@ -1,7 +1,7 @@
 # Memo 1 — A Kami-Styled, Context-Preserving, Decision-Aware 2D/3D Architecture Explorer
 
 Status: Proposed  
-Repository: vanHeemstraSystems/architecture-decision-records-management. 
+Repository: vanHeemstraSystems/architecture-decision-records-management.  
 Purpose: Define the implementation vision for evolving the existing Structurizr-based architecture and ADR environment into a coherent Kami-styled, context-preserving architecture explorer spanning Structurizr diagrams, SVG visualisations, and interactive Three.js 3D views.  
 
 ⸻
