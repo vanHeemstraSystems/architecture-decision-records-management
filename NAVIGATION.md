@@ -43,7 +43,7 @@ package.json
 
 ## Interactive Viewer
 
-**Note**: Open the browser at the designated port (e.g. localhost:3000) to watch the canvas after you have run below command(s). You will land on the landing page at first. Here you have the option to switch between workspaces also. To return to the landing page, simply refresh the browser or follow the breadcrumb menu once you are inside of one of the workspaces by clicking on the house icon.
+**Note**: Open the browser at the designated port (e.g. localhost:3000) to watch the canvas after you have run below command(s). You will land on the landing page at first. Here you have the option to switch between workspaces also. To return to welcome page simply refresh the browser, or follow the breadcrumb menu once you are inside of one of the workspaces by clicking on the house icon to go to the landing page.
 
 ```
 spacerizr workspace.dsl # altenatively, npm run arch:workspace
