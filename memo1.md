@@ -1,12 +1,12 @@
-Memo 1 — A Kami-Styled, Context-Preserving, Decision-Aware 2D/3D Architecture Explorer
+# Memo 1 — A Kami-Styled, Context-Preserving, Decision-Aware 2D/3D Architecture Explorer
 
-Status: Proposed
-Repository: vanHeemstraSystems/architecture-decision-records-management
-Purpose: Define the implementation vision for evolving the existing Structurizr-based architecture and ADR environment into a coherent Kami-styled, context-preserving architecture explorer spanning Structurizr diagrams, SVG visualisations, and interactive Three.js 3D views.
+Status: Proposed  
+Repository: vanHeemstraSystems/architecture-decision-records-management. 
+Purpose: Define the implementation vision for evolving the existing Structurizr-based architecture and ADR environment into a coherent Kami-styled, context-preserving architecture explorer spanning Structurizr diagrams, SVG visualisations, and interactive Three.js 3D views.  
 
 ⸻
 
-1. Executive Summary
+## 1. Executive Summary
 
 This repository already demonstrates several powerful ideas:
 
@@ -64,7 +64,7 @@ Three.js provides spatial exploration and semantic zoom.
 
 ⸻
 
-2. Motivation
+## 2. Motivation
 
 The existing implementation reveals several shortcomings inherent in conventional architecture diagrams.
 
@@ -172,7 +172,7 @@ This opens an opportunity to visualise not only architecture, but also the reaso
 
 ⸻
 
-3. Architectural Principle
+## 3. Architectural Principle
 
 The implementation should separate four concerns.
 
@@ -207,7 +207,7 @@ No renderer should become the source of truth.
 
 ⸻
 
-4. Structurizr Remains the Architecture Model
+## 4. Structurizr Remains the Architecture Model
 
 workspace.dsl should remain authoritative for the structural architecture.
 
@@ -251,7 +251,7 @@ This gives external renderers a stable machine-readable representation of the ar
 
 ⸻
 
-5. Kami as the Shared Visual Design System
+## 5. Kami as the Shared Visual Design System
 
 The Kami repository should define the canonical visual language.
 
@@ -282,7 +282,7 @@ an enterprise diagramming application.
 
 ⸻
 
-6. Design Tokens
+## 6. Design Tokens
 
 Renderer-specific styles should not independently define the visual language.
 
@@ -314,7 +314,7 @@ The dependency becomes:
 
 ⸻
 
-7. Kami Structurizr Theme
+## 7. Kami Structurizr Theme
 
 Structurizr supports reusable JSON themes containing tag-based element and relationship styles.
 
@@ -377,7 +377,7 @@ producing theme.json.
 
 ⸻
 
-8. Kami Compliance Levels
+## 8. Kami Compliance Levels
 
 Not every renderer provides identical capabilities.
 
@@ -437,7 +437,7 @@ Preserve the same visual principles while introducing genuinely spatial concepts
 
 ⸻
 
-9. Groups as Regions
+## 9. Groups as Regions
 
 Structurizr group should be used where collections of elements belong within a conceptual region.
 
@@ -474,7 +474,7 @@ Kami styling should make these boundaries subtle rather than visually dominant.
 
 ⸻
 
-10. Context-Preserving Drill-Down
+## 10. Context-Preserving Drill-Down
 
 This should become a core interaction principle.
 
@@ -510,7 +510,7 @@ Parchment = architectural space.
 
 ⸻
 
-11. Semantic Zoom
+## 11. Semantic Zoom
 
 The long-term interaction model should resemble geographical mapping more than page navigation.
 
@@ -541,7 +541,7 @@ The architecture should retain stable geography wherever practical.
 
 ⸻
 
-12. Three.js as the Spatial Renderer
+## 12. Three.js as the Spatial Renderer
 
 Three.js should consume the same architecture and Kami semantics.
 
@@ -563,7 +563,7 @@ Where Structurizr supplies resolved styling, Three.js should honour it where mea
 
 ⸻
 
-13. Three.js-Specific Kami Properties
+## 13. Three.js-Specific Kami Properties
 
 Three-dimensional visualisation necessarily introduces properties Structurizr does not define.
 
@@ -632,7 +632,7 @@ Avoid:
 
 ⸻
 
-14. Semantic Zoom in Three.js
+## 14. Semantic Zoom in Three.js
 
 Three.js provides an opportunity to solve context loss much better than conventional 2D drill-down.
 
@@ -662,7 +662,7 @@ The architecture becomes a space one navigates rather than a sequence of unrelat
 
 ⸻
 
-15. SVG as a Complementary Projection
+## 15. SVG as a Complementary Projection
 
 SVG should remain available for architectural questions that C4 does not naturally express.
 
@@ -697,7 +697,7 @@ Switching between them should feel like turning pages in the same architecture b
 
 ⸻
 
-16. Perspectives
+## 16. Perspectives
 
 Structurizr perspectives should be exploited to preserve spatial memory while changing the architectural question.
 
@@ -720,7 +720,7 @@ Keep the objects stable; change the information projected onto them.
 
 ⸻
 
-17. Architecture Decisions as First-Class Citizens
+## 17. Architecture Decisions as First-Class Citizens
 
 ADRs must become first-class citizens of the architecture explorer.
 
@@ -736,7 +736,7 @@ Therefore a Decision should have its own visual primitive.
 
 ⸻
 
-18. Decision Visual Primitive
+## 18. Decision Visual Primitive
 
 Do not represent ADRs as ordinary system/container boxes.
 
@@ -772,7 +772,7 @@ The object should appear more like an annotation or museum label than another ar
 
 ⸻
 
-19. Decisions as a Semantic 3D Layer
+## 19. Decisions as a Semantic 3D Layer
 
 The z-axis should carry semantic meaning.
 
@@ -794,7 +794,7 @@ This makes the 3D environment an architecture knowledge space rather than simply
 
 ⸻
 
-20. Progressive ADR Interaction
+## 20. Progressive ADR Interaction
 
 Do not attempt to render an entire Markdown ADR permanently in 3D.
 
@@ -831,7 +831,7 @@ Three.js therefore remains a spatial index into architectural knowledge, not a r
 
 ⸻
 
-21. Decision → Architecture Exploration
+## 21. Decision → Architecture Exploration
 
 Selecting an ADR should reveal its architectural footprint.
 
@@ -870,7 +870,7 @@ What architectural footprint did this decision create?
 
 ⸻
 
-22. Architecture → Decision Exploration
+## 22. Architecture → Decision Exploration
 
 The inverse operation is equally important.
 
@@ -902,7 +902,7 @@ This bidirectional navigation should become a defining feature.
 
 ⸻
 
-23. Decision History
+## 23. Decision History
 
 Structurizr ADRs include statuses such as:
 
@@ -942,7 +942,7 @@ Three.js can therefore reveal a spatial history of architectural reasoning.
 
 ⸻
 
-24. ADR Metadata Extension
+## 24. ADR Metadata Extension
 
 Structurizr’s ADR attachment establishes useful scope, but richer spatial exploration requires explicit information about which architecture elements a decision affects.
 
@@ -970,7 +970,7 @@ It supplements the ADR; it does not replace the human-readable decision record.
 
 ⸻
 
-25. Architecture Knowledge Graph
+## 25. Architecture Knowledge Graph
 
 The implementation should eventually compile Structurizr and ADR information into an intermediate graph.
 
@@ -1006,7 +1006,7 @@ This graph becomes the common input for richer visualisations.
 
 ⸻
 
-26. Proposed Repository Structure
+## 26. Proposed Repository Structure
 
 An eventual structure might resemble:
 
@@ -1060,7 +1060,7 @@ Existing repository conventions should be preserved where practical.
 
 ⸻
 
-27. Build Pipeline
+## 27. Build Pipeline
 
 The desired build flow is:
 
@@ -1090,7 +1090,7 @@ Generation should eventually be reproducible through CI.
 
 ⸻
 
-28. Implementation Phases
+## 28. Implementation Phases
 
 Phase 1 — Kami Structurizr
 
@@ -1243,7 +1243,7 @@ These should be projections over common knowledge rather than independent docume
 
 ⸻
 
-29. Design Principles
+## 29. Design Principles
 
 The implementation should continuously enforce the following principles.
 
@@ -1289,7 +1289,7 @@ Three.js, SVG, and Structurizr are projections—not sources of architectural tr
 
 ⸻
 
-30. Long-Term Vision
+## 30. Long-Term Vision
 
 The resulting system should ultimately feel less like navigating a collection of diagrams and more like exploring an architecture knowledge space.
 
@@ -1333,7 +1333,7 @@ The Three.js implementation becomes valuable because it provides a spatial inter
 
 ⸻
 
-31. Target Experience
+## 31. Target Experience
 
 Imagine opening the architecture.
 
@@ -1382,7 +1382,7 @@ That is the intended destination.
 
 ⸻
 
-32. References
+## 32. References
 
 Existing implementation
 
@@ -1446,7 +1446,7 @@ Architecture Decision Records
 
 ⸻
 
-33. Conclusion
+## 33. Conclusion
 
 The goal is not to replace Structurizr.
 
