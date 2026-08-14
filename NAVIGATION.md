@@ -95,8 +95,11 @@ In Presentation Mode:
 | ← → | Previous / Next slide |
 | L or 1 | Toggle laser pointer |
 | 2 | Toggle Spotlight |
+| v | Toggle between 3D and 2D |
 | Esc | Exit presentation |
 | | |
 
+In the floating menu when in Presentation Mode, you also have the option to:
 
-MORE
+- Export as HTML presentation
+- Export as PowerPoint
