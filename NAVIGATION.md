@@ -86,14 +86,17 @@ spacerizr decisions/ --export svg   # exports all files
 | Drag | Rotate (3D) / Pan (2D) |
 | Ctrl+V | Paste DSL content |
 | / | Search |
+| | |
 
 In Presentation Mode:
 
 | Key | Action |
 | --- | --- |
 | ← → | Previous / Next slide |
-| L | Toggle laser pointer |
+| L or 1 | Toggle laser pointer |
+| 2 | Toggle Spotlight |
 | Esc | Exit presentation |
+| | |
 
 
 MORE
