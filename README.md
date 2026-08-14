@@ -8,4 +8,5 @@
 
 1. [Installation](./INSTALLATION.md)
 2. [Quick Start](./QUICK_START.md)
-3. [Visualisation](./VISUALISATION.md) 
+3. [Visualisation](./VISUALISATION.md)
+4. [Navigation](./NAVIGATION.md)  
