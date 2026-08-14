@@ -33,7 +33,7 @@
     "people" : [ {
       "description" : "A user of the management platform.",
       "id" : "1",
-      "name" : "User",
+      "name" : "User A",
       "properties" : {
         "structurizr.dsl.identifier" : "user"
       },

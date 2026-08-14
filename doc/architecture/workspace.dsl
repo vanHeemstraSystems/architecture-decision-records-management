@@ -4,7 +4,7 @@ workspace "ADR Workspace" "Architecture Decision Records Management" {
       scope landscape
     }
     model {
-        user = person "User" "A user of the management platform."
+        user = person "User A" "A user of the management platform."
         softwareSystem = softwareSystem "Software System" "My primary application."
         user -> softwareSystem "Uses" "Web Browser (HTTPS)"
     }
