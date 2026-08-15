@@ -22,7 +22,7 @@ The next evolution should not replace Structurizr.
 Instead, Structurizr should become the authoritative architecture model, while multiple visual projections are generated from that model.
 
 The proposed architecture is:
-
+```
                          ARCHITECTURE KNOWLEDGE
                                │
                         workspace.dsl
@@ -47,7 +47,7 @@ The proposed architecture is:
                                ▼
                          Kami Design
                             System
-
+```
 The governing principle is:
 
 One architecture model, one architectural history, one visual language, multiple projections.
@@ -68,29 +68,29 @@ Three.js provides spatial exploration and semantic zoom.
 
 The existing implementation reveals several shortcomings inherent in conventional architecture diagrams.
 
-2.1 Loss of spatial memory during drill-down
+### 2.1 Loss of spatial memory during drill-down
 
 Moving from a System Landscape or System Context diagram into a Container view effectively replaces one diagram with another.
 
 For example:
-
+```
 System A ───────── System B ───────── System C
                        │
                        ▼
                 open System B
-
+```
 becomes:
-
+```
 API ───────── Worker ───────── Database
-
+```
 Although the second view contains more detail, the viewer has lost the spatial context of:
-
+```
 System A ←→ System B ←→ System C
-
+```
 The user therefore has to reconstruct the previous mental model.
 
 The desired behaviour is closer to semantic zoom:
-
+```
 A ─────────────── [ B ] ─────────────── C
                        │
                        ▼
@@ -99,12 +99,12 @@ A · · ·     ╭────────── B ─────────�
             │ API → Worker → DB     │
             │                       │
             ╰───────────────────────╯
-
+```
 The surrounding architecture should remain visible while the selected subject reveals more detail.
 
 ⸻
 
-2.2 Conventional Structurizr styling is visually harsh
+### 2.2 Conventional Structurizr styling is visually harsh
 
 The conventional C4/Structurizr aesthetic tends toward:
 
@@ -121,7 +121,7 @@ Kami is already used for SVG visualisations and should become the shared design 
 
 ⸻
 
-2.3 Not every architectural concept belongs in C4
+### 2.3 Not every architectural concept belongs in C4
 
 C4 is excellent for describing:
 
@@ -149,7 +149,7 @@ The same architecture knowledge should support multiple projections appropriate 
 
 ⸻
 
-2.4 Architecture Decisions deserve first-class spatial representation
+### 2.4 Architecture Decisions deserve first-class spatial representation
 
 ADRs are already first-class content within this repository.
 
@@ -175,7 +175,7 @@ This opens an opportunity to visualise not only architecture, but also the reaso
 ## 3. Architectural Principle
 
 The implementation should separate four concerns.
-
+```
 ┌───────────────────────────────────────────────┐
 │                ARCHITECTURE MODEL             │
 │                                               │
@@ -202,7 +202,7 @@ The implementation should separate four concerns.
 │                                               │
 │ Structurizr 2D │ SVG │ Three.js │ future ... │
 └───────────────────────────────────────────────┘
-
+```
 No renderer should become the source of truth.
 
 ⸻
@@ -234,7 +234,7 @@ The compiled workspace.json becomes particularly useful for downstream renderers
 Structurizr describes workspace.json as the compiled representation of the DSL workspace, additionally containing layout information.
 
 The implementation pipeline should therefore include:
-
+```
 workspace.dsl
       │
       │ Structurizr CLI
@@ -246,7 +246,7 @@ workspace.json
       ├────────▶ Three.js
       │
       └────────▶ auxiliary generators
-
+```
 This gives external renderers a stable machine-readable representation of the architecture.
 
 ⸻
@@ -289,7 +289,7 @@ Renderer-specific styles should not independently define the visual language.
 Introduce canonical Kami architecture tokens.
 
 For example:
-
+```
 {
   "canvas": "#f5f4ed",
   "ink": "#1B365D",
@@ -299,11 +299,11 @@ For example:
   "surface": "#F5F4ED",
   "surfaceMuted": "#EFEDE4"
 }
-
+```
 The exact canonical values should ultimately be sourced from Kami rather than duplicated manually.
 
 The dependency becomes:
-
+```
                        Kami tokens
                            │
              ┌─────────────┼─────────────┐
@@ -311,7 +311,7 @@ The dependency becomes:
              ▼             ▼             ▼
       Structurizr       SVG/CSS       Three.js
           theme                           theme
-
+```
 ⸻
 
 ## 7. Kami Structurizr Theme
@@ -321,7 +321,7 @@ Structurizr supports reusable JSON themes containing tag-based element and relat
 A Kami Structurizr adapter should therefore be introduced.
 
 Possible structure:
-
+```
 doc/architecture/
 ├── workspace.dsl
 ├── workspace.json
@@ -335,9 +335,9 @@ doc/architecture/
 ├── decisions/
 │
 └── visualisations/
-
+```
 An initial style might conceptually resemble:
-
+```
 styles {
     element "Element" {
         shape RoundedBox
@@ -364,15 +364,15 @@ styles {
         routing Curved
     }
 }
-
+```
 The precise properties should be validated against the Structurizr version used by the repository.
 
 Structurizr themes can be generated from a DSL workspace with the CLI:
-
+```
 structurizr export \
   -workspace theme.dsl \
   -format theme
-
+```
 producing theme.json.
 
 ⸻
@@ -385,7 +385,7 @@ Trying to pixel-match all renderers would create unnecessary complexity.
 
 Define three compliance levels.
 
-8.1 Kami Native
+### 8.1 Kami Native
 
 Used where complete presentation control exists.
 
@@ -404,7 +404,7 @@ Supports:
 
 ⸻
 
-8.2 Kami Adapted
+### 8.2 Kami Adapted
 
 Used for Structurizr’s native diagram renderer.
 
@@ -421,7 +421,7 @@ Accept renderer-native typography or other unavoidable limitations.
 
 ⸻
 
-8.3 Kami Spatial
+### 8.3 Kami Spatial
 
 Used for Three.js.
 
@@ -444,7 +444,7 @@ Structurizr group should be used where collections of elements belong within a c
 Groups can be nested and are rendered as boundaries.
 
 For example:
-
+```
 payments = softwareSystem "Payments" {
     group "EU Region" {
         group "Application" {
@@ -457,9 +457,9 @@ payments = softwareSystem "Payments" {
         }
     }
 }
-
+```
 Conceptually:
-
+```
 ╭──────────────────── EU Region ────────────────────╮
 │                                                   │
 │   ╭──── Application ────╮   ╭────── Data ──────╮ │
@@ -469,7 +469,7 @@ Conceptually:
 │   ╰─────────────────────╯   ╰───────────────────╯ │
 │                                                   │
 ╰───────────────────────────────────────────────────╯
-
+```
 Kami styling should make these boundaries subtle rather than visually dominant.
 
 ⸻
