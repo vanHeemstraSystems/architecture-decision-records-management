@@ -18,8 +18,13 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 container.appendChild(renderer.domElement);
 
-// Add ground plane
+// Add ground plane and visible architectural grid
 const ground = kami.createGround(scene);
+const grid = new THREE.GridHelper(40, 24, '#B8B1A4', '#E4DFD7');
+grid.position.y = -1.25;
+grid.material.opacity = 0.7;
+grid.material.transparent = true;
+scene.add(grid);
 
 // Get materials
 const materials = kami.getMaterials();
@@ -133,10 +138,10 @@ const labelMap = new Map();
 
 const getMaterialForNode = (kind) => {
   switch (kind) {
-    case 'system': return materials.ink;
-    case 'container': return materials.muted;
-    case 'decision': return materials.parchment;
-    default: return materials.neutral;
+    case 'system': return materials.focus ?? materials.ink ?? materials.secondary;
+    case 'container': return materials.secondary ?? materials.context ?? materials.muted;
+    case 'decision': return materials.canvas ?? materials.neutral ?? materials.secondary;
+    default: return materials.neutral ?? materials.secondary;
   }
 };
 

@@ -145,11 +145,10 @@ export const KAMI_MATERIALS = {
 
   /**
    * Relationship lines - connections between elements
-   * Soft, curved aesthetic, not emphasizing flow
+   * Soft, simple line aesthetic that works with core Three.js
    */
-  relationship: (THREE) => new THREE.MeshLine({
+  relationship: (THREE) => new THREE.LineBasicMaterial({
     color: KAMI_TOKENS.muted,    // #777064
-    lineWidth: 0.08,              // Thin visual weight
     transparent: true,
     opacity: 0.6,
   }),
@@ -590,15 +589,3 @@ export class KamiAdapter {
   }
 }
 
-/**
- * Export everything for modular usage
- */
-export {
-  KAMI_TOKENS,
-  KAMI_MATERIALS,
-  KAMI_GEOMETRY,
-  KAMI_LIGHTING,
-  KAMI_CAMERA,
-  KAMI_INTERACTIONS,
-  KAMI_SCENE,
-};

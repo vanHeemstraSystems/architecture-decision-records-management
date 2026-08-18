@@ -29,7 +29,7 @@ services:
       ARTIFACTORY_TOKEN: ${ARTIFACTORY_TOKEN}
     volumes:
       - ./:/app
-    command: sh -lc "npx spacerizr workspace.dsl --port ${NAVIGATION_APP_PORT:-3000}"
+    command: sh -lc "npx --yes http-server ./visualisations/threejs -p ${NAVIGATION_APP_PORT:-3000} -d false"
     restart: unless-stopped
     logging:
       options:
