@@ -16,4 +16,4 @@
 
 ## Architecture vision
 
-The project direction is captured in [memo1.md](./memo1.md). The first implementation step is the shared Kami visual language under [doc/architecture/themes/kami/README.md](./doc/architecture/themes/kami/README.md), with the visualisation structure documented in [doc/architecture/visualisations/README.md](./doc/architecture/visualisations/README.md).
+The project direction is captured in [memo1.md](./memo1.md). The first implementation step is the shared Kami visual language under [doc/architecture/themes/kami/README.md](./doc/architecture/themes/kami/README.md), with the visualisation structure documented in [doc/architecture/visualisations/README.md](./doc/architecture/visualisations/README.md). Follow-up directions are captured in consecutive memo*.md files kept in this repository. Completed or abandoned memo*.md files are kept at ./archive/memo*.md for prosterity.
