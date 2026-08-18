@@ -11,6 +11,7 @@
 3. [Visualisation](./VISUALISATION.md)
 4. [Navigation](./NAVIGATION.md)  
 5. [Sites](./SITES.md)
+6. [Drift](./DRIFT.md)
 
 ## Architecture vision
 
