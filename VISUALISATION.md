@@ -87,7 +87,7 @@ Open the workspace in a web browser by heading to http://localhost:8080 and you 
 
 ![adr_list.png](./images/adr_list.png)
 
-NOTE: If you get the browser to tell you that it cannot open the page, notice The connection refusal happens because you are running the container inside GitHub Codespaces.
+NOTE: If you get the browser to tell you that it cannot open the page, notice the connection refusal happens because you are running the container inside GitHub Codespaces.
 
 When a service runs on port `8080` inside a virtual codespace environment, it cannot be accessed directly via your computer's local network at https://localhost:8080. Instead, GitHub routes it through a secure web proxy URL.
 
