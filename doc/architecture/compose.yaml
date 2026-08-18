@@ -1,0 +1,15 @@
+name: architecture-decision-records
+services:
+    lite:
+        image: ${DOCKER_REGISTRY}structurizr/lite:2025.11.08
+        ports:
+          - "${APP_PORT:-8080}:8080"
+        volumes:
+          - ./:/usr/local/structurizr
+        environment:
+          ARTIFACTORY_NPM_REGISTRY: ${ARTIFACTORY_NPM_REGISTRY}
+          ARTIFACTORY_TOKEN: ${ARTIFACTORY_TOKEN}
+        restart: always
+        logging:
+          options:
+            max-size: "1g"
