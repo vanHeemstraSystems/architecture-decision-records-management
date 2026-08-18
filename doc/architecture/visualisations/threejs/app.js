@@ -43,6 +43,32 @@ resetButton.textContent = '← Back to overview';
 resetButton.style.display = 'none';
 document.body.appendChild(resetButton);
 
+const viewButtons = Array.from(document.querySelectorAll('.menu-button'));
+const setActiveViewButton = (viewName) => {
+  viewButtons.forEach((button) => {
+    const isActive = button.dataset.view === viewName;
+    button.classList.toggle('is-active', isActive);
+  });
+};
+
+viewButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const { view } = button.dataset;
+    if (view === '3d') {
+      setActiveViewButton('3d');
+      resetZoom();
+      return;
+    }
+
+    if (view === 'overview') {
+      setActiveViewButton('overview');
+      resetZoom();
+      infoPanel.innerHTML = '<h1>Architecture Explorer</h1><p>Hover or select a node to reveal the related ADR or system context.</p>';
+      return;
+    }
+  });
+});
+
 const architectureGraph = await fetch('./data/architecture-graph.json').then((response) => response.json());
 
 const zoomState = {
