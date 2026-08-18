@@ -11,3 +11,7 @@
 3. [Visualisation](./VISUALISATION.md)
 4. [Navigation](./NAVIGATION.md)  
 5. [Sites](./SITES.md)
+
+## Architecture vision
+
+The project direction is captured in [memo1.md](./memo1.md). The first implementation step is the shared Kami visual language under [doc/architecture/themes/kami/README.md](./doc/architecture/themes/kami/README.md), with the visualisation structure documented in [doc/architecture/visualisations/README.md](./doc/architecture/visualisations/README.md).

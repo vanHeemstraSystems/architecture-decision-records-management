@@ -1,16 +1,36 @@
 name: architecture-decision-records
 services:
-    lite:
-        image: ${DOCKER_REGISTRY}structurizr/lite:2025.11.08
-        ports:
-          - "${APP_PORT:-9090}:9090"
-        volumes:
-          - ./:/usr/local/structurizr
-        environment:
-          ARTIFACTORY_NPM_REGISTRY: ${ARTIFACTORY_NPM_REGISTRY}
-          ARTIFACTORY_TOKEN: ${ARTIFACTORY_TOKEN}
-          PORT: 9090
-        restart: always
-        logging:
-          options:
-            max-size: "1g"
+  lite:
+    image: ${DOCKER_REGISTRY}structurizr/lite:2025.11.08
+    ports:
+      - "${VISUALISATION_APP_PORT:-9090}:9090"
+    volumes:
+      - ./:/usr/local/structurizr
+    environment:
+      ARTIFACTORY_NPM_REGISTRY: ${ARTIFACTORY_NPM_REGISTRY}
+      ARTIFACTORY_TOKEN: ${ARTIFACTORY_TOKEN}
+      PORT: 9090
+    restart: always
+    logging:
+      options:
+        max-size: "1g"
+
+  architecture:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    ports:
+      - "${NAVIGATION_APP_PORT:-3000}:3000"
+    environment:
+      NAVIGATION_APP_PORT: ${NAVIGATION_APP_PORT:-3000}
+      PORT: ${NAVIGATION_APP_PORT:-3000}
+      ARTIFACTORY_NPM_REGISTRY: ${ARTIFACTORY_NPM_REGISTRY}
+      ARTIFACTORY_TOKEN: ${ARTIFACTORY_TOKEN}
+    volumes:
+      - ./:/app
+    command: sh -lc "npx spacerizr workspace.dsl --port ${NAVIGATION_APP_PORT:-3000}"
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "1g"

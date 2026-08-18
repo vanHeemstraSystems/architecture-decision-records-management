@@ -1,9 +1,13 @@
-ARG ARTIFACTORY_NPM_REGISTRY
-ARG ARTIFACTORY_TOKEN
-FROM node:12.21.0-alpine3.12
-WORKDIR /usr/src/app
-RUN apk update
-RUN npm config set "//${ARTIFACTORY_NPM_REGISTRY}/:_authToken" "${ARTIFACTORY_TOKEN}"
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --include=dev
+
 COPY . .
-EXPOSE 9090
-CMD [ "npm", "run", "--debug" ]
+
+ENV PORT=${PORT:-3000}
+EXPOSE 3000
+
+CMD ["sh", "-lc", "npx spacerizr workspace.dsl --port ${PORT:-3000}"]

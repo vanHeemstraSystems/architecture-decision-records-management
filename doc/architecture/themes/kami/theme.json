@@ -1,0 +1,48 @@
+{
+  "name": "Kami Architecture",
+  "version": "0.1.0",
+  "description": "Warm, context-preserving palette aligned to the Architecture Explorer vision described in memo1.md.",
+  "tokens": {
+    "canvas": "#f5f4ed",
+    "ink": "#1B365D",
+    "text": "#2C2924",
+    "muted": "#777064",
+    "border": "#B8B1A4",
+    "surface": "#F5F4ED",
+    "surfaceMuted": "#EFEDE4",
+    "accent": "#1B365D",
+    "neutral": "#9E978B"
+  },
+  "styles": {
+    "element": {
+      "background": "#F5F4ED",
+      "color": "#2C2924",
+      "stroke": "#B8B1A4",
+      "strokeWidth": 1,
+      "shape": "RoundedBox"
+    },
+    "person": {
+      "background": "#F5F4ED",
+      "color": "#1B365D",
+      "stroke": "#1B365D",
+      "strokeWidth": 2
+    },
+    "softwareSystem": {
+      "background": "#F5F4ED",
+      "color": "#1B365D",
+      "stroke": "#1B365D",
+      "strokeWidth": 2
+    },
+    "container": {
+      "background": "#EFEDE4",
+      "color": "#2C2924",
+      "stroke": "#9E978B",
+      "strokeWidth": 1
+    },
+    "relationship": {
+      "color": "#777064",
+      "thickness": 1,
+      "routing": "Curved"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "person-1",
+      "label": "User A",
+      "kind": "person",
+      "x": -6,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "id": "system-2",
+      "label": "Software System",
+      "kind": "system",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "id": "adr-0001",
+      "label": "ADR-0001",
+      "kind": "decision",
+      "x": -2.4,
+      "y": 4.5,
+      "z": -0.6
+    },
+    {
+      "id": "adr-0002",
+      "label": "ADR-0002",
+      "kind": "decision",
+      "x": 0,
+      "y": 4.5,
+      "z": -0.09999999999999998
+    },
+    {
+      "id": "adr-0003",
+      "label": "ADR-0003",
+      "kind": "decision",
+      "x": 2.4,
+      "y": 4.5,
+      "z": -0.6
+    }
+  ],
+  "links": [
+    {
+      "from": "person-1",
+      "to": "system-2"
+    },
+    {
+      "from": "adr-0001",
+      "to": "system-2"
+    },
+    {
+      "from": "adr-0002",
+      "to": "system-2"
+    },
+    {
+      "from": "adr-0003",
+      "to": "system-2"
+    }
+  ],
+  "adrs": [
+    {
+      "id": "ADR-0001",
+      "title": "1. Record architecture decisions",
+      "status": "Accepted",
+      "date": "2026-07-29",
+      "summary": "We need to record the architectural decisions made on this project.",
+      "file": "0001-record-architecture-decisions.md",
+      "affects": []
+    },
+    {
+      "id": "ADR-0002",
+      "title": "2. Implement as Unix shell scripts",
+      "status": "Accepted",
+      "date": "2026-07-29",
+      "summary": "The issue motivating this decision, and any context that influences or constrains the decision.",
+      "file": "0002-implement-as-unix-shell-scripts.md",
+      "affects": []
+    },
+    {
+      "id": "ADR-0003",
+      "title": "3. Use Rust for performance-critical functionality",
+      "status": "Accepted",
+      "date": "2026-07-29",
+      "summary": "The issue motivating this decision, and any context that influences or constrains the decision.",
+      "file": "0003-use-rust-for-performance-critical-functionality.md",
+      "affects": []
+    }
+  ]
+}
