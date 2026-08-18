@@ -12,23 +12,23 @@
       "status" : "Accepted",
       "title" : "--"
     }, {
-      "content" : "# 2. Implement as Unix shell scripts\n\nDate: 2026-07-29\n\n## Status\n\nAccepted\n\n## Context\n\nThe issue motivating this decision, and any context that influences or constrains the decision.\n\n## Decision\n\nThe change that we're proposing or have agreed to implement.\n\n## Consequences\n\nWhat becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.\n",
+      "content" : "---\nstatus: \"Accepted\"\n---\n# 2. Implement as Unix shell scripts\n\nDate: 2026-07-29\n\n## Status\n\nAccepted\n\n## Context\n\nThe issue motivating this decision, and any context that influences or constrains the decision.\n\n## Decision\n\nThe change that we're proposing or have agreed to implement.\n\n## Consequences\n\nWhat becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.\n",
       "date" : "2026-07-29T00:00:00Z",
       "format" : "Markdown",
       "id" : "2",
       "status" : "Accepted",
-      "title" : "Implement as Unix shell scripts"
+      "title" : "--"
     }, {
-      "content" : "# 3. Use Rust for performance-critical functionality\n\nDate: 2026-07-29\n\n## Status\n\nAccepted\n\n## Context\n\nThe issue motivating this decision, and any context that influences or constrains the decision.\n\n## Decision\n\nThe change that we're proposing or have agreed to implement.\n\n## Consequences\n\nWhat becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.\n",
+      "content" : "---\nstatus: \"Accepted\"\n---\n# 3. Use Rust for performance-critical functionality\n\nDate: 2026-07-29\n\n## Status\n\nAccepted\n\n## Context\n\nThe issue motivating this decision, and any context that influences or constrains the decision.\n\n## Decision\n\nThe change that we're proposing or have agreed to implement.\n\n## Consequences\n\nWhat becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.\n",
       "date" : "2026-07-29T00:00:00Z",
       "format" : "Markdown",
       "id" : "3",
       "status" : "Accepted",
-      "title" : "Use Rust for performance-critical functionality"
+      "title" : "--"
     } ]
   },
   "id" : 1,
-  "lastModifiedDate" : "2026-08-04T09:31:56Z",
+  "lastModifiedDate" : "2026-08-18T10:07:05Z",
   "model" : {
     "people" : [ {
       "description" : "A user of the management platform.",
@@ -67,17 +67,20 @@
   },
   "views" : {
     "configuration" : {
+      "branding" : { },
       "styles" : { },
       "terminology" : { },
       "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
     },
     "systemContextViews" : [ {
       "automaticLayout" : {
-        "edgeSeparation" : 50,
-        "nodeSeparation" : 50,
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 100,
-        "vertices" : true
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
       },
       "elements" : [ {
         "id" : "1",

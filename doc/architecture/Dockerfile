@@ -5,5 +5,5 @@ WORKDIR /usr/src/app
 RUN apk update
 RUN npm config set "//${ARTIFACTORY_NPM_REGISTRY}/:_authToken" "${ARTIFACTORY_TOKEN}"
 COPY . .
-EXPOSE 8080
+EXPOSE 9090
 CMD [ "npm", "run", "--debug" ]
