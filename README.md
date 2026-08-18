@@ -12,6 +12,7 @@
 4. [Navigation](./NAVIGATION.md)  
 5. [Sites](./SITES.md)
 6. [Drift](./DRIFT.md)
+7. [Like](./LIKE.md)
 
 ## Architecture vision
 
