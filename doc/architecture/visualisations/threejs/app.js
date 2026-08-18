@@ -1,43 +1,32 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js';
+import { KamiAdapter } from './kami-adapter.mjs';
+
+// Initialize Kami Three.js adapter
+const kami = new KamiAdapter(THREE);
+kami.initializeMaterials();
 
 const container = document.getElementById('app');
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color('#f5f4ed');
+// Create Kami-styled scene, camera, and lighting
+const scene = kami.createScene();
+const camera = kami.createCamera(window.innerWidth, window.innerHeight);
+const lighting = kami.createLighting(scene);
 
-const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 6, 18);
-
+// Create renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 container.appendChild(renderer.domElement);
 
-const ambientLight = new THREE.AmbientLight('#f7f2ea', 1.4);
-scene.add(ambientLight);
+// Add ground plane
+const ground = kami.createGround(scene);
 
-const keyLight = new THREE.DirectionalLight('#dfe9f4', 1.0);
-keyLight.position.set(5, 8, 8);
-scene.add(keyLight);
+// Get materials
+const materials = kami.getMaterials();
 
-const materials = {
-  parchment: new THREE.MeshStandardMaterial({ color: '#f5f4ed', roughness: 0.96, metalness: 0.0, transparent: true }),
-  ink: new THREE.MeshStandardMaterial({ color: '#1B365D', roughness: 0.82, metalness: 0.0, transparent: true }),
-  muted: new THREE.MeshStandardMaterial({ color: '#9E978B', roughness: 0.9, metalness: 0.0, transparent: true }),
-  neutral: new THREE.MeshStandardMaterial({ color: '#EFEDE4', roughness: 0.95, metalness: 0.0, transparent: true }),
-  accent: new THREE.MeshStandardMaterial({ color: '#777064', roughness: 0.92, metalness: 0.0, transparent: true }),
-};
-
+// Container for architecture elements
 const group = new THREE.Group();
 scene.add(group);
-
-const floor = new THREE.Mesh(
-  new THREE.PlaneGeometry(26, 26),
-  new THREE.MeshStandardMaterial({ color: '#efece3', side: THREE.DoubleSide, roughness: 1 })
-);
-floor.rotation.x = -Math.PI / 2;
-floor.position.y = -1.3;
-scene.add(floor);
 
 const infoPanel = document.createElement('div');
 infoPanel.className = 'panel';

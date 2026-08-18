@@ -1,7 +1,7 @@
 workspace "ADR Workspace" "Architecture Decision Records Management" {
     !adrs decisions
     configuration {
-      scope landscape
+      scope softwareSystem
     }
     model {
         user = person "User" "An architect or stakeholder managing architectural decisions."
@@ -30,22 +30,9 @@ workspace "ADR Workspace" "Architecture Decision Records Management" {
             }
         }
         
-        structurizrLite = softwareSystem "Structurizr Lite" "Canonical C4 architecture model and views." {
-            group "Core" {
-                dslParser = container "DSL Parser" "Parses workspace.dsl"
-                modelEngine = container "Model Engine" "Compiles architecture model"
-            }
-            group "Visualization" {
-                diagramRenderer = container "Diagram Renderer" "Renders C4 views"
-            }
-        }
+        structurizrLite = softwareSystem "Structurizr Lite" "Canonical C4 architecture model and views."
         
-        adrs = softwareSystem "Architecture Decisions" "Markdown-based decision records with metadata." {
-            group "Storage" {
-                decisionFiles = container "Decision Files" "ADR/*.md files"
-                metadata = container "Metadata" "YAML frontmatter in ADRs"
-            }
-        }
+        adrs = softwareSystem "Architecture Decisions" "Markdown-based decision records with metadata."
         
         # System relationships
         user -> softwareSystem "Explores architecture"
@@ -70,85 +57,49 @@ workspace "ADR Workspace" "Architecture Decision Records Management" {
         }
         
         # Phase 3: Context-Preserving Container View
-        # This view shows the Architecture Explorer's containers with surrounding systems visible but faded
-        container softwareSystem "ArchitectureExplorerWithContext" {
+        # Shows the Architecture Explorer's containers with surrounding systems visible but faded
+        container softwareSystem "ArchitectureExplorerContainers" {
             title "Architecture Explorer: Internal Architecture with Surrounding Context"
-            description "Detailed view of the Architecture Explorer's layers and containers, with surrounding systems visible in subdued context."
-            
-            # Include the primary system's containers
-            include softwareSystem.webUI
-            include softwareSystem.navigationService
-            include softwareSystem.structurizrAdapter
-            include softwareSystem.adrParser
-            include softwareSystem.workspaceCache
-            include softwareSystem.adrIndex
-            include softwareSystem.structurizrRenderer
-            include softwareSystem.svgRenderer
-            include softwareSystem.threeJsRenderer
-            
-            # Include relationships within the system
-            include softwareSystem -> structurizrLite
-            include softwareSystem -> adrs
-            
-            # Include external context (surrounding systems shown faded)
+            description "Detailed view of the Architecture Explorer's four layers and nine containers, with external systems visible for context preservation."
+            include *
             include structurizrLite
             include adrs
-            include user
-            
-            autoLayout
-        }
-        
-        # Phase 3: Layer-focused views with context
-        # Application Layer detail with context
-        component webUI "ApplicationLayerDetail" {
-            title "Application Layer: Web UI Component with Context"
-            description "Web UI implementation with external system references shown for context."
-            include webUI
-            include navigationService
-            include structurizrRenderer
-            include svgRenderer
-            include threeJsRenderer
             include user
             autoLayout
         }
         
-        # Integration Layer detail with context
-        component structurizrAdapter "IntegrationLayerDetail" {
-            title "Integration Layer: Adapter Components with Context"
-            description "Integration components showing how external systems are consumed."
-            include structurizrAdapter
-            include adrParser
-            include structurizrLite
-            include adrs
+        # Structurizr Lite system context
+        systemContext structurizrLite "StructurizrLiteContext" {
+            title "Structurizr Lite: Canonical Architecture Model"
+            description "The authoritative Structurizr-based architecture model and its relationships."
+            include *
+            autoLayout
+        }
+        
+        # Architecture Decisions system context
+        systemContext adrs "ArchitectureDecisionsContext" {
+            title "Architecture Decisions: Decision Records and History"
+            description "The system of record for architectural decisions and their rationale."
+            include *
             autoLayout
         }
         
         theme themes/kami/theme.json
-    }
-    
-    # Phase 3: Add styling rules for context preservation
-    styles {
-        # Muted styling for context elements (surrounding systems)
-        element "Muted" {
-            opacity 0.4
-            color #777064
-            stroke #B8B1A4
-            strokeWidth 1
-        }
         
-        # Ink styling for focused elements (primary system)
-        element "Focus" {
-            color #1B365D
-            stroke #1B365D
-            strokeWidth 2
-        }
-        
-        # Graphite styling for context background
-        element "Context" {
-            color #777064
-            opacity 0.6
-            stroke #B8B1A4
-            strokeWidth 1
+        # Phase 3: Context preservation styling tags
+        # Structurizr opacity values require integer percentages from 0 to 100.
+        styles {
+            element "Muted" {
+                opacity 40
+            }
+            
+            element "Focus" {
+                opacity 100
+            }
+            
+            element "Context" {
+                opacity 60
+            }
         }
     }
 }
