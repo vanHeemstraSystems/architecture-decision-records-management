@@ -93,7 +93,7 @@ Introduce a renderer-neutral ArchitectureScene model between them.
 
 This keeps the rendering boundary testable and allows the scene to be exported, inspected or reused without running a GPU renderer.
 
-3. Target solution
+## 3. Target solution
 ```
                          SOURCE
                            |
@@ -146,7 +146,7 @@ Its responsibilities are:
 * applying filters and view definitions;
 * supporting deep links to a view or selected entity.
 
-4. Recommended repository layout
+## 4. Recommended repository layout
 ```
 .
 ├── .dockerignore
@@ -196,7 +196,7 @@ Its responsibilities are:
 ```
 generated/ MAY be excluded from Git when CI and Docker always regenerate it.
 
-5. LikeC4 modelling
+## 5. LikeC4 modelling
 
 Use LikeC4’s flexible specification to define the architecture vocabulary needed by this repository.
 
@@ -232,7 +232,7 @@ adr006 -> explorer 'introduces'
 ```
 The viewer MUST recognize kind = decision and apply decision-specific Kami tokens.
 
-6. Renderer-neutral scene model
+## 6. Renderer-neutral scene model
 
 Create a stable internal representation.
 ```
