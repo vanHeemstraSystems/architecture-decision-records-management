@@ -65,6 +65,12 @@ docker run -d --name structurizr-local \
   structurizr/structurizr local
 ```
 
+In case you prefer docker compose, have a `compose.yaml` file in the same directory from which you run your docker commands, then run instead:
+
+```
+docker compose up
+```
+
 Check the System Container Logs.
 
 Before opening the web view, make sure the system initialized fully without crashing. Run this command:
