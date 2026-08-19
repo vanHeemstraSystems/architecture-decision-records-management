@@ -17,7 +17,7 @@ The objective is to make Svelte-specific AI assistance part of the repository’
 Adopt OpenCode with the official @sveltejs/opencode integration as the preferred AI-assisted development environment for the SvelteKit application described in memo4.md.
 
 The target development chain is:
-
+```
 Developer
     │
     ▼
@@ -52,12 +52,12 @@ OpenCode
                     ▼
           Architecture experience
               2D + 3D views
-
+```
 The LLM therefore provides general reasoning and software-engineering capability, while Svelte’s own AI tooling supplies framework-specific knowledge, validation and editing support.
 
 ⸻
 
-2. Why This Matters
+## 2. Why This Matters
 
 A generic coding LLM inevitably has a knowledge cutoff.
 
@@ -75,7 +75,7 @@ That is particularly relevant for this project because it intends to use modern 
 We should therefore avoid making the model itself the authoritative source for current Svelte APIs.
 
 Instead:
-
+```
 LLM knowledge
      +
 Svelte-maintained knowledge
@@ -83,12 +83,12 @@ Svelte-maintained knowledge
 Svelte-aware validation
      =
 better Svelte engineering
-
+```
 This distinction becomes increasingly important as Svelte and SvelteKit evolve.
 
 ⸻
 
-3. Architectural Principle
+## 3. Architectural Principle
 
 The repository SHALL distinguish between:
 
@@ -130,17 +130,17 @@ The LLM should reason about Svelte using Svelte’s current tooling, rather than
 
 ⸻
 
-4. @sveltejs/opencode
+## 4. @sveltejs/opencode
 
 Add the official Svelte OpenCode integration to the development environment.
 
 The OpenCode configuration should include:
-
+```
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": ["@sveltejs/opencode"]
 }
-
+```
 The exact configuration MAY evolve as OpenCode and the Svelte AI tooling mature.
 
 Do not unnecessarily duplicate configuration supplied by the plugin.
@@ -149,12 +149,12 @@ Prefer the smallest configuration that gives the agent access to the official Sv
 
 ⸻
 
-5. Svelte MCP
+## 5. Svelte MCP
 
 The Svelte MCP layer is a key architectural component.
 
 Conceptually:
-
+```
 OpenCode agent
       │
       ▼
@@ -168,7 +168,7 @@ Svelte MCP
       ├── inspect Svelte code
       ├── suggest corrections
       └── validate generated code
-
+```
 Where practical, the agent SHOULD consult Svelte documentation through the Svelte tooling before making significant framework-specific implementation decisions.
 
 This is especially important for:
@@ -186,7 +186,7 @@ This is especially important for:
 
 ⸻
 
-6. Svelte File Editing
+## 6. Svelte File Editing
 
 Svelte files should not be treated as generic HTML or TypeScript files.
 
@@ -199,7 +199,7 @@ For files such as:
 OpenCode should make use of the Svelte-specific editing capabilities supplied by @sveltejs/opencode.
 
 The expected workflow is:
-
+```
 Task
  │
  ▼
@@ -218,19 +218,19 @@ Svelte-specific agent/tooling
  │
  ▼
 candidate implementation
-
+```
 This gives us an important engineering property:
 
 AI-generated Svelte code is checked by Svelte-aware tooling before it is considered complete.
 
 ⸻
 
-7. Validation Is Mandatory
+## 7. Validation Is Mandatory
 
 AI assistance must not bypass conventional engineering validation.
 
 The resulting pipeline should remain approximately:
-
+```
 AI generation
      │
      ▼
@@ -250,28 +250,28 @@ build
      │
      ▼
 container build
-
+```
 A successful LLM response is not equivalent to a successful implementation.
 
 Repository-defined deterministic checks remain authoritative.
 
 At minimum, changes should be capable of passing the project’s equivalents of:
-
+```
 npm run check
 npm run lint
 npm test
 npm run build
-
+```
 Exact scripts should be defined by the implementation repository.
 
 ⸻
 
-8. Local-First LLM Strategy
+## 8. Local-First LLM Strategy
 
 OpenCode and @sveltejs/opencode should remain independent of a specific model vendor.
 
 The preferred architecture is:
-
+```
                  OpenCode
                     │
              model interface
@@ -282,11 +282,11 @@ The preferred architecture is:
         │                       │
  lower marginal cost      stronger model when
  privacy/locality          genuinely required
-
+```
 This allows routine engineering work to be attempted using locally hosted models while retaining the ability to use stronger remote models for difficult tasks.
 
 The Svelte intelligence layer remains conceptually unchanged:
-
+```
 Local model ───┐
                ├── OpenCode
 Remote model ──┘       │
@@ -295,17 +295,17 @@ Remote model ──┘       │
                        │
                        ▼
                    Svelte MCP
-
+```
 This is important because model selection and framework expertise become separate concerns.
 
 ⸻
 
-9. Model Escalation
+## 9. Model Escalation
 
 The implementation SHOULD support model escalation rather than assuming every task requires the most capable or expensive model.
 
 For example:
-
+```
 Task
  │
  ▼
@@ -320,7 +320,7 @@ Local model
           │
           ▼
        validate
-
+```
 Suitable local-model tasks may include:
 
 * routine component creation;
@@ -344,14 +344,14 @@ The repository should not encode an unnecessary dependency on a particular comme
 
 ⸻
 
-10. Relationship to SvelteKit
+## 10. Relationship to SvelteKit
 
 SvelteKit remains the application framework.
 
 @sveltejs/opencode does not become part of the production application architecture.
 
 This distinction is important:
-
+```
 DEVELOPMENT
 Developer
    ↓
@@ -370,21 +370,21 @@ SvelteKit application
 LikeC4
    +
 Babylon.js
-
+```
 The OpenCode/Svelte AI tooling belongs to the engineering control plane, not the application runtime.
 
 Production containers therefore should not need OpenCode or @sveltejs/opencode.
 
 ⸻
 
-11. Relationship to LikeC4
+## 11. Relationship to LikeC4
 
 LikeC4 remains responsible for architecture semantics and architecture-model visualization.
 
 Svelte should provide the surrounding application experience.
 
 Conceptually:
-
+```
 SvelteKit
  │
  ├── navigation
@@ -399,19 +399,19 @@ SvelteKit
        ├── LikeC4 2D
        │
        └── Babylon.js 3D
-
+```
 The AI tooling can therefore assist with the integration code while LikeC4 remains authoritative for architecture modeling.
 
 The agent should not recreate LikeC4 semantics manually in Svelte components when LikeC4 already provides the required information.
 
 ⸻
 
-12. Relationship to Babylon.js
+## 12. Relationship to Babylon.js
 
 Babylon.js remains the preferred 3D rendering technology established in memo4.md.
 
 The development split should remain clear:
-
+```
 LikeC4
    │
    ▼
@@ -423,7 +423,7 @@ projection / transformation
    ├────────────► LikeC4 2D
    │
    └────────────► Babylon.js 3D
-
+```
 Svelte components provide lifecycle and UI integration around Babylon.js.
 
 The AI agent can help generate this integration, but the repository should maintain clear boundaries between:
@@ -437,10 +437,10 @@ Avoid giant Svelte components containing the entire 3D engine implementation.
 
 ⸻
 
-13. Recommended Source Structure
+## 13. Recommended Source Structure
 
 The exact structure may evolve, but the implementation should move toward boundaries similar to:
-
+```
 .
 ├── .opencode/
 │   └── svelte.json
@@ -474,14 +474,14 @@ The exact structure may evolve, but the implementation should move toward bounda
 ├── Dockerfile
 ├── compose.yaml
 └── .env.example
-
+```
 Do not create empty directories simply to match this diagram.
 
 Create boundaries when implementation requires them.
 
 ⸻
 
-14. Repository Instructions for AI Agents
+## 14. Repository Instructions for AI Agents
 
 The repository SHOULD explicitly document how AI agents are expected to work.
 
@@ -502,14 +502,14 @@ Instructions should include principles such as:
 
 ⸻
 
-15. Docker Boundary
+## 15. Docker Boundary
 
 The Docker architecture defined in memo4.md remains valid.
 
 The production image should contain only what is required to run the SvelteKit application.
 
 Conceptually:
-
+```
 Developer machine
 │
 ├── OpenCode
@@ -526,27 +526,27 @@ Developer machine
 production image
       │
       └── SvelteKit application
-
+```
 Do not install the complete AI development environment into the final runtime image.
 
 A multi-stage Docker build should continue to separate:
-
+```
 dependencies
     ↓
 build
     ↓
 minimal runtime
-
+```
 ⸻
 
-16. CI Remains Deterministic
+## 16. CI Remains Deterministic
 
 AI tooling belongs primarily to development.
 
 CI should not require an LLM to determine whether the repository is valid.
 
 Prefer:
-
+```
 git push
    │
    ▼
@@ -558,26 +558,26 @@ CI
    ├── test
    ├── build
    └── container validation
-
+```
 over:
-
+```
 git push
    │
    ▼
 ask an LLM whether the code looks correct
-
+```
 AI review MAY later supplement CI.
 
 It must not replace deterministic checks.
 
 ⸻
 
-17. Preparing for Future SvelteKit Versions
+## 17. Preparing for Future SvelteKit Versions
 
 One strategic advantage of this architecture is reduced dependence on model training dates.
 
 As SvelteKit evolves:
-
+```
 new SvelteKit release
         │
         ▼
@@ -591,7 +591,7 @@ Svelte MCP
         │
         ▼
 OpenCode agent
-
+```
 This should make future migrations easier because the agent can reason with current framework information.
 
 This is especially useful while preparing for a future major SvelteKit version.
@@ -609,17 +609,17 @@ The repository must still:
 
 ⸻
 
-18. Implementation Sequence
+## 18. Implementation Sequence
 
 Implement this memo incrementally.
 
-Phase 1 — OpenCode
+### Phase 1 — OpenCode
 
 Introduce OpenCode configuration into the repository.
 
 Verify that ordinary repository tasks can be performed through OpenCode.
 
-Phase 2 — Svelte Integration
+### Phase 2 — Svelte Integration
 
 Enable:
 
@@ -627,18 +627,18 @@ Enable:
 
 Verify that the plugin is active for Svelte work.
 
-Phase 3 — MCP
+### Phase 3 — MCP
 
 Configure the preferred Svelte MCP mode.
 
 Confirm that the agent can retrieve current Svelte documentation.
 
-Phase 4 — Svelte Editing
+### Phase 4 — Svelte Editing
 
 Test the workflow against a real .svelte component.
 
 The agent should:
-
+```
 inspect
    ↓
 retrieve relevant guidance
@@ -648,25 +648,25 @@ edit
 validate
    ↓
 correct
-
-Phase 5 — Repository Validation
+```
+### Phase 5 — Repository Validation
 
 Ensure AI-created changes pass:
-
+```
 npm run check
 npm run lint
 npm test
 npm run build
-
+```
 Adapt these commands to the actual repository scripts.
 
-Phase 6 — Local Model
+### Phase 6 — Local Model
 
 Configure OpenCode to use the preferred local inference endpoint where supported.
 
 Use a simple Svelte task as the first acceptance test.
 
-Phase 7 — Model Escalation
+### Phase 7 — Model Escalation
 
 Document which classes of work are normally handled locally and when a stronger remote model should be selected.
 
@@ -674,7 +674,7 @@ Do not prematurely automate escalation until practical usage demonstrates that i
 
 ⸻
 
-19. Acceptance Criteria
+## 19. Acceptance Criteria
 
 This memo is considered implemented when:
 
@@ -694,7 +694,7 @@ This memo is considered implemented when:
 
 ⸻
 
-20. Non-Goals
+## 20. Non-Goals
 
 This memo does not propose:
 
@@ -714,10 +714,10 @@ Give coding agents first-class, current, Svelte-aware engineering capabilities w
 
 ⸻
 
-21. Target End State
+## 21. Target End State
 
 The resulting development architecture should be:
-
+```
                          DEVELOPER
                              │
                              ▼
@@ -759,7 +759,7 @@ The resulting development architecture should be:
                                       │
                                       ▼
                                 Docker image
-
+```
 This creates a useful separation of concerns:
 
 the model reasons, Svelte tooling supplies framework expertise, deterministic tools verify the result, and SvelteKit runs the application.
@@ -768,7 +768,7 @@ That should be the preferred AI-assisted development model for the architecture 
 
 ⸻
 
-References
+## References
 
 * memo4.md — SvelteKit / LikeC4 / Babylon.js application architecture
 * @sveltejs/opencode — https://www.npmjs.com/package/@sveltejs/opencode
