@@ -1,8 +1,8 @@
-# Memo 4 — LikeC4 + SvelteKit + Babylon Lite Architecture Explorer
+# Skipped Memo (2) — LikeC4 + SvelteKit + Babylon Lite Architecture Explorer
 
 Status: Implementation specification  
 Target repository: vanHeemstraSystems/architecture-decision-records-management  
-Primary artifact: memo4.md  
+Primary artifact: skipped-memo-2.md  
 
 ## 1. Purpose
 
