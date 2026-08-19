@@ -9,7 +9,7 @@ The production implementation SHALL initially target the latest stable SvelteKit
 SvelteKit 3 prereleases SHALL NOT be required for production. Once SvelteKit 3 reaches stable maturity, the application SHOULD migrate without requiring a redesign of its domain, rendering, or LikeC4 integration layers.
 
 The target architecture is:
-
+```
 Svelte 5
     +
 SvelteKit 2.x → SvelteKit 3
@@ -27,17 +27,17 @@ Babylon.js renderer
 Kami design tokens
     +
 OpenTelemetry
-
+```
 Structurizr is no longer required in the target runtime architecture.
 
 ⸻
 
-1. Executive Summary
+## 1. Executive Summary
 
 The architecture visualization application SHALL be implemented as a SvelteKit application rather than as a standalone Vite application or a Structurizr extension.
 
 Its responsibilities are deliberately separated.
-
+```
 LikeC4
     │
     │ architecture semantics
@@ -58,9 +58,9 @@ Babylon.js 2D   Babylon.js 3D
            │
            ▼
         Svelte UI
-
+```
 SvelteKit surrounds these components as the application platform:
-
+```
 ┌──────────────────────────────────────────────────────────┐
 │                      SVELTEKIT                           │
 │                                                          │
@@ -91,7 +91,7 @@ SvelteKit surrounds these components as the application platform:
 │      └── persistence                                     │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
-
+```
 A fundamental design rule SHALL be:
 
 SvelteKit is an interface onto the architecture engine. SvelteKit is not the architecture engine.
@@ -100,7 +100,7 @@ This separation allows the same architecture capabilities eventually to be expos
 
 ⸻
 
-2. Why SvelteKit
+## 2. Why SvelteKit
 
 SvelteKit provides considerably more value to this application than using Svelte with Vite alone.
 
@@ -129,7 +129,7 @@ LikeC4 remains responsible for architecture modelling.
 Kami remains responsible for visual language.
 
 This provides clear ownership:
-
+```
 $app/navigation    → navigation
 $app/state         → application state
 $app/forms         → forms
@@ -140,17 +140,17 @@ Architecture Core  → application/domain semantics
 Babylon.js         → visualization
 Kami               → visual identity
 OpenTelemetry      → observability
-
+```
 ⸻
 
-3. Why We Are Designing for SvelteKit 3
+## 3. Why We Are Designing for SvelteKit 3
 
 SvelteKit 3 introduces and consolidates capabilities that fit this application particularly well.
 
 The most important is the increasingly integrated remote-function model.
 
 Rather than designing the application primarily around manually maintained REST endpoints such as:
-
+```
 Svelte component
       ↓
 fetch('/api/architecture/decision/ADR-001')
@@ -166,9 +166,9 @@ JSON
 client interface
       ↓
 component
-
+```
 the application SHOULD move toward domain-oriented operations:
-
+```
 Svelte component
       │
       │ getDecision("ADR-001")
@@ -180,14 +180,14 @@ Architecture application layer
       │
       ▼
 LikeC4 / ADR repository
-
+```
 This removes unnecessary transport-oriented thinking from the application.
 
 The UI asks architecture questions rather than constructing HTTP requests.
 
 ⸻
 
-4. SvelteKit 2 First, SvelteKit 3 Ready
+## 4. SvelteKit 2 First, SvelteKit 3 Ready
 
 The production implementation SHALL initially use stable SvelteKit 2.x.
 
@@ -196,7 +196,7 @@ It SHALL NOT depend on SvelteKit 3 prerelease APIs.
 However, the codebase SHALL be structured so that migration to SvelteKit 3 is inexpensive.
 
 The application SHOULD therefore use:
-
+```
 SvelteKit
     │
     ▼
@@ -207,19 +207,19 @@ application services
     │
     ▼
 domain
-
+```
 rather than:
-
+```
 SvelteKit
     │
     ▼
 domain logic mixed throughout routes
-
+```
 Framework-specific APIs MUST remain at the edges of the system.
 
 ⸻
 
-5. Architecture Domain
+## 5. Architecture Domain
 
 The project SHALL introduce an explicit architecture domain between LikeC4 and the visualization layer.
 
@@ -230,7 +230,7 @@ Babylon.js MUST NOT operate directly on the LikeC4 AST.
 Likewise, Svelte components MUST NOT become dependent on LikeC4 implementation details.
 
 Instead:
-
+```
 LikeC4
    │
    ▼
@@ -244,17 +244,17 @@ Scene Graph
    │
    ▼
 Babylon.js
-
+```
 This allows LikeC4 to remain replaceable and allows additional model sources to be introduced later.
 
 ⸻
 
-6. Canonical Architecture Model
+## 6. Canonical Architecture Model
 
 The application SHALL define its own canonical model.
 
 Conceptually:
-
+```
 ArchitectureModel
 │
 ├── Elements
@@ -270,9 +270,9 @@ ArchitectureModel
 ├── Metadata
 │
 └── References
-
+```
 Representative TypeScript definitions may look like:
-
+```
 export type ArchitectureElementId = string;
 export type DecisionId = string;
 export type ViewId = string;
@@ -302,21 +302,21 @@ export interface ArchitectureView {
     name: string;
     elements: ArchitectureElementId[];
 }
-
+```
 The exact schema may evolve.
 
 The architectural boundary MUST NOT.
 
 ⸻
 
-7. ADRs Are First-Class Citizens
+## 7. ADRs Are First-Class Citizens
 
 Architecture Decision Records SHALL remain first-class architecture entities.
 
 They MUST NOT merely be treated as documentation attached to another element.
 
 The canonical architecture model therefore includes:
-
+```
 System
 Container
 Component
@@ -325,9 +325,9 @@ Group
 Relationship
 Decision
 View
-
+```
 A decision can relate to:
-
+```
 Decision
    │
    ├── System
@@ -336,23 +336,23 @@ Decision
    ├── Relationship
    ├── another Decision
    └── external evidence
-
+```
 This solves one of the limitations encountered with the earlier Structurizr-oriented approach.
 
 ADRs can therefore become actual visual objects in both 2D and 3D.
 
 ⸻
 
-8. LikeC4 Adapter
+## 8. LikeC4 Adapter
 
 LikeC4 SHALL be treated as an infrastructure adapter.
 
 Conceptually:
 
-src/lib/architecture/infrastructure/likec4/
+`src/lib/architecture/infrastructure/likec4/`
 
 Its responsibility is:
-
+```
 LikeC4 source
       ↓
 parse
@@ -364,7 +364,7 @@ LikeC4 model
 translate
       ↓
 Canonical Architecture Model
-
+```
 No Babylon-specific concerns belong here.
 
 No Kami-specific concerns belong here.
@@ -375,12 +375,12 @@ This is purely architecture-model translation.
 
 ⸻
 
-9. Application Services
+## 9. Application Services
 
 Architecture operations SHALL be represented as normal TypeScript application functions.
 
 For example:
-
+```
 getArchitecture()
 getArchitectureContext()
 getElement()
@@ -393,15 +393,15 @@ getDependencies()
 getDependants()
 getView()
 searchArchitecture()
-
+```
 Representative usage:
 
-const context = await getArchitectureContext(elementId);
+`const context = await getArchitectureContext(elementId);`
 
 These functions MUST NOT inherently be SvelteKit remote functions.
 
 Instead:
-
+```
                          ┌── SvelteKit
                          │
 application service ─────┼── CLI
@@ -411,29 +411,29 @@ application service ─────┼── CLI
                          ├── tests
                          │
                          └── future agents
-
+```
 This is one of the most important architectural decisions in this memo.
 
 ⸻
 
-10. Remote Functions
+## 10. Remote Functions
 
 Where appropriate, SvelteKit remote functions SHOULD expose application services to the browser.
 
 For example:
-
+```
 architecture.remote.ts
 decisions.remote.ts
 search.remote.ts
 views.remote.ts
-
+```
 Conceptually:
 
-export const architectureContext = query(...);
+`export const architectureContext = query(...);`
 
 which delegates to:
 
-getArchitectureContext(...)
+`getArchitectureContext(...)`
 
 The remote function MUST remain thin.
 
@@ -450,12 +450,12 @@ It MUST NOT contain core architecture logic.
 
 ⸻
 
-11. Query-Oriented Architecture Exploration
+## 11. Query-Oriented Architecture Exploration
 
 Architecture exploration maps particularly well onto SvelteKit’s query model.
 
 Read operations SHOULD eventually appear as operations such as:
-
+```
 getModel()
 getView(id)
 getElement(id)
@@ -467,9 +467,9 @@ getDependants(id)
 getDecisions(id)
 getDecision(id)
 searchArchitecture(query)
-
+```
 Mutation operations SHOULD be represented separately:
-
+```
 createDecision()
 updateDecision()
 createRelationship()
@@ -478,26 +478,26 @@ moveElement()
 saveLayout()
 createView()
 updateView()
-
+```
 This provides a very clear distinction:
-
+```
 QUERY
   │
   └── understand architecture
 COMMAND
   │
   └── change architecture
-
+```
 This distinction SHOULD be preserved independently of SvelteKit so that the same vocabulary can later be used by agents and other Open Engineering interfaces.
 
 ⸻
 
-12. Canonical Scene Graph
+## 12. Canonical Scene Graph
 
 Babylon.js SHOULD consume a scene representation rather than the complete architecture model.
 
 The transformation is:
-
+```
 Architecture Model
        │
        ▼
@@ -508,9 +508,9 @@ Canonical Scene Graph
        │
        ▼
 Babylon.js
-
+```
 A representative node might be:
-
+```
 export interface SceneNode {
     id: string;
     kind: ArchitectureElementKind;
@@ -522,9 +522,9 @@ export interface SceneNode {
     };
     styleToken: string;
 }
-
+```
 Relationships similarly become scene edges.
-
+```
 export interface SceneEdge {
     id: string;
     source: string;
@@ -532,15 +532,15 @@ export interface SceneEdge {
     label?: string;
     styleToken: string;
 }
-
+```
 This ensures Babylon.js never needs to understand LikeC4 syntax.
 
 ⸻
 
-13. One Scene Graph, Two Representations
+## 13. One Scene Graph, Two Representations
 
 The application SHOULD use the same canonical scene graph for both 2D and 3D.
-
+```
                    Scene Graph
                        │
               ┌────────┴────────┐
@@ -549,21 +549,21 @@ The application SHOULD use the same canonical scene graph for both 2D and 3D.
               │                 │
               ▼                 ▼
           Babylon.js        Babylon.js
-
+```
 The difference between 2D and 3D therefore becomes primarily:
-
+```
 camera
 layout
 depth
 lighting
 interaction
 animation
-
+```
 rather than two independent rendering implementations.
 
 ⸻
 
-14. Babylon.js
+## 14. Babylon.js
 
 Babylon.js SHALL replace the earlier Three.js-oriented visualization concept.
 
@@ -594,7 +594,7 @@ This is especially important because the application shell itself should remain 
 
 ⸻
 
-15. Lazy Loading Babylon.js
+## 15. Lazy Loading Babylon.js
 
 Babylon.js SHOULD NOT unnecessarily increase the initial SvelteKit bundle.
 
@@ -602,10 +602,10 @@ The renderer SHOULD be dynamically loaded when the architecture canvas is requir
 
 Conceptually:
 
-const renderer = await import('$lib/renderer/babylon');
+`const renderer = await import('$lib/renderer/babylon');`
 
 This provides:
-
+```
 Initial request
     │
     ▼
@@ -616,28 +616,28 @@ architecture page
     │
     ▼
 load Babylon renderer
-
+```
 instead of:
-
+```
 every page
     │
     ▼
 download Babylon.js
-
+```
 ⸻
 
-16. Kami Theme
+## 16. Kami Theme
 
 Kami SHALL remain the single visual source of truth.
 
 The application SHALL NOT separately invent:
-
+```
 CSS theme
 Babylon theme
 LikeC4 theme
-
+```
 Instead:
-
+```
 Kami Design Tokens
         │
         ├── CSS variables
@@ -651,9 +651,9 @@ Kami Design Tokens
         ├── edge styles
         │
         └── typography
-
+```
 Representative tokens could include:
-
+```
 kami.color.background
 kami.color.surface
 kami.color.primary
@@ -670,19 +670,19 @@ kami.relationship.highlighted
 kami.radius.default
 kami.shadow.default
 kami.spacing.default
-
+```
 Babylon materials SHALL be generated from these tokens.
 
 Svelte CSS SHALL use the same tokens.
 
 ⸻
 
-17. 2D and 3D Must Look Like the Same Product
+## 17. 2D and 3D Must Look Like the Same Product
 
 Switching between 2D and 3D MUST NOT look like switching between unrelated applications.
 
 For example:
-
+```
 SYSTEM
   ↓
 Kami system token
@@ -693,17 +693,17 @@ DECISION
 Kami decision token
   ├── 2D decision card
   └── 3D decision object
-
+```
 Color, typography, visual hierarchy and semantic identity MUST remain consistent.
 
 ⸻
 
-18. Svelte Components
+## 18. Svelte Components
 
 Svelte SHALL own UI composition around the visualization.
 
 Potential components include:
-
+```
 ArchitectureCanvas.svelte
 ArchitectureToolbar.svelte
 ViewSelector.svelte
@@ -716,11 +716,11 @@ Breadcrumbs.svelte
 NavigationHistory.svelte
 KamiPanel.svelte
 KamiDialog.svelte
-
+```
 Babylon.js MUST NOT become responsible for ordinary application UI.
 
 For example, selecting a node may originate in Babylon:
-
+```
 Babylon picking
       ↓
 element ID
@@ -728,22 +728,22 @@ element ID
 Svelte state
       ↓
 ElementInspector
-
+```
 ⸻
 
-19. Navigation
+## 19. Navigation
 
 Architecture navigation SHOULD be reflected in application URLs where useful.
 
 For example:
-
+```
 /
  /architecture
  /architecture/views
  /architecture/views/:id
  /architecture/elements/:id
  /architecture/decisions/:id
-
+```
 This provides:
 
 * browser history;
@@ -756,12 +756,12 @@ The Babylon scene SHOULD synchronize with application navigation rather than imp
 
 ⸻
 
-20. Server-Side Architecture Processing
+## 20. Server-Side Architecture Processing
 
 Architecture parsing and processing SHOULD remain server-side whenever browser execution provides no clear benefit.
 
 Examples include:
-
+```
 LikeC4 parsing
 ADR Markdown loading
 repository traversal
@@ -770,31 +770,31 @@ architecture validation
 relationship analysis
 graph queries
 model transformations
-
+```
 The browser SHOULD receive purpose-specific DTOs.
 
 For example:
-
+```
 Browser asks:
 getElement("payment-service")
 Server returns:
 ElementDetailsDTO
-
+```
 rather than:
-
+```
 Browser downloads:
 entire LikeC4 AST
-
+```
 ⸻
 
-21. OpenTelemetry
+## 21. OpenTelemetry
 
 The application SHOULD be designed for OpenTelemetry observability.
 
 Once the relevant SvelteKit observability APIs are sufficiently stable, server operations SHOULD emit traces.
 
 An architecture interaction might become:
-
+```
 architecture.view.open
     │
     ├── architecture.model.load
@@ -806,20 +806,20 @@ architecture.view.open
     ├── architecture.decisions.resolve
     │
     └── architecture.scene.generate
-
+```
 A decision interaction might become:
-
+```
 architecture.decision.open
     │
     ├── adr.load
     ├── adr.references.resolve
     └── architecture.context.resolve
-
+```
 This aligns naturally with the Open Engineering principle that system behavior should be observable and explainable.
 
 ⸻
 
-22. Browser Performance
+## 22. Browser Performance
 
 The visualization MUST remain responsive for substantial architecture models.
 
@@ -841,18 +841,18 @@ The system SHOULD avoid rendering every piece of architecture information simult
 
 ⸻
 
-23. Progressive Architecture Loading
+## 23. Progressive Architecture Loading
 
 Large models SHOULD support progressive exploration.
 
 Instead of:
-
+```
 load entire enterprise
       ↓
 render 20,000 objects
-
+```
 prefer:
-
+```
 load selected view
       ↓
 render visible context
@@ -862,15 +862,15 @@ user selects element
 request related context
       ↓
 expand scene
-
+```
 This combines particularly well with query-oriented SvelteKit application services.
 
 ⸻
 
-24. Proposed Repository Structure
+## 24. Proposed Repository Structure
 
 The implementation SHOULD converge toward:
-
+```
 .
 ├── src/
 │   ├── lib/
@@ -945,17 +945,17 @@ The implementation SHOULD converge toward:
 ├── svelte.config.js
 ├── vite.config.ts
 └── README.md
-
+```
 The exact placement of SvelteKit-specific remote-function files SHALL follow the API conventions of the SvelteKit version actually installed.
 
 ⸻
 
-25. Testing Strategy
+## 25. Testing Strategy
 
 The architecture SHALL make testing possible without starting SvelteKit or Babylon.js.
 
 Domain tests
-
+```
 LikeC4 fixture
       ↓
 adapter
@@ -963,15 +963,15 @@ adapter
 ArchitectureModel
       ↓
 assertions
-
+```
 Application tests
 
-const result = await getArchitectureContext('foo');
+`const result = await getArchitectureContext('foo');`
 
 These tests MUST NOT require a browser.
 
 Scene tests
-
+```
 ArchitectureModel
       ↓
 SceneBuilder
@@ -979,7 +979,7 @@ SceneBuilder
 SceneGraph
       ↓
 assertions
-
+```
 These SHOULD NOT require Babylon.
 
 Renderer tests
@@ -995,25 +995,25 @@ Renderer tests validate:
 End-to-end tests
 
 Finally:
-
+```
 SvelteKit
     +
 Babylon
     +
 LikeC4
-
+```
 is validated through browser-level tests.
 
 This layered strategy is another direct consequence of keeping the framework at the boundary.
 
 ⸻
 
-26. Container Architecture
+## 26. Container Architecture
 
 The application SHALL run as a Docker container.
 
 The target runtime is:
-
+```
 Browser
    │
    │ HTTP
@@ -1024,15 +1024,15 @@ SvelteKit Node server
    ├── application operations
    ├── LikeC4
    └── ADR content
-
+```
 The production container SHOULD use a multi-stage build.
 
 ⸻
 
-27. Dockerfile
+## 27. Dockerfile
 
 A representative implementation is:
-
+```
 FROM node:22-alpine AS dependencies
 WORKDIR /app
 COPY package*.json ./
@@ -1050,17 +1050,17 @@ RUN npm ci --omit=dev
 COPY --from=build /app/build ./build
 EXPOSE 3000
 CMD ["node", "build"]
-
+```
 The exact Node baseline SHALL follow the supported baseline of the chosen SvelteKit release.
 
 The application SHOULD use @sveltejs/adapter-node.
 
 ⸻
 
-28. compose.yaml
+## 28. compose.yaml
 
 A representative local deployment is:
-
+```
 name: architecture-decision-records
 services:
   architecture:
@@ -1080,49 +1080,49 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-
+```
 Unlike the earlier Structurizr container, no special user mapping SHOULD be required merely to run the application.
 
 ⸻
 
-29. Environment Configuration
+## 29. Environment Configuration
 
 .env.example SHOULD contain only configuration that genuinely varies between deployments.
 
 For example:
-
+```
 APP_PORT=8080
 ARCHITECTURE_ROOT=/app/architecture
 OTEL_ENABLED=false
 OTEL_SERVICE_NAME=architecture-decision-records
-
+```
 Secrets MUST NOT be committed.
 
 Browser-visible environment values MUST be explicitly distinguished from server-only configuration.
 
 ⸻
 
-30. Local Development
+## 30. Local Development
 
 The expected development workflow is:
-
+```
 npm install
 npm run dev
-
+```
 The application becomes available through the SvelteKit development server.
 
 Production-like execution:
-
+```
 docker compose build
 docker compose up -d
-
+```
 Then:
 
-http://localhost:8080
+`http://localhost:8080`
 
 ⸻
 
-31. Development Container Versus Production Container
+## 31. Development Container Versus Production Container
 
 Development SHOULD normally use the native SvelteKit development server for fast HMR.
 
@@ -1134,65 +1134,65 @@ Production and development concerns SHOULD NOT be unnecessarily mixed in one con
 
 ⸻
 
-32. Migration Path from the Existing Structurizr Implementation
+## 32. Migration Path from the Existing Structurizr Implementation
 
 Migration SHOULD be incremental.
 
-Phase 1 — Foundation
+### Phase 1 — Foundation
 
 Create:
-
+```
 Svelte 5
 SvelteKit 2
 adapter-node
 Docker
 Compose
-
+```
 Verify:
-
+```
 browser
    ↓
 SvelteKit
    ↓
 container
-
-Phase 2 — Architecture Domain
+```
+### Phase 2 — Architecture Domain
 
 Introduce:
-
+```
 ArchitectureModel
 ArchitectureElement
 ArchitectureRelationship
 ArchitectureDecision
 ArchitectureView
-
+```
 No renderer yet.
 
-Phase 3 — LikeC4
+### Phase 3 — LikeC4
 
 Introduce the LikeC4 adapter.
 
 Verify:
-
+```
 LikeC4
    ↓
 ArchitectureModel
-
+```
 using automated tests.
 
-Phase 4 — Scene Graph
+### Phase 4 — Scene Graph
 
 Implement:
-
+```
 ArchitectureModel
    ↓
 SceneBuilder
    ↓
 SceneGraph
-
+```
 Again, without Babylon.
 
-Phase 5 — Babylon 2D
+### Phase 5 — Babylon 2D
 
 Implement the initial architecture canvas using Babylon.js in a primarily two-dimensional projection.
 
@@ -1206,19 +1206,19 @@ This establishes:
 * labels;
 * Kami styling.
 
-Phase 6 — ADR Visualization
+### Phase 6 — ADR Visualization
 
 Add Decision nodes as first-class scene objects.
 
 Support:
-
+```
 Decision → Element
 Decision → Relationship
 Decision → Decision
-
+```
 and opening the corresponding Markdown ADR.
 
-Phase 7 — 3D
+### Phase 7 — 3D
 
 Extend the same scene graph into 3D.
 
@@ -1230,49 +1230,49 @@ Add:
 * spatial grouping;
 * animated transitions.
 
-Phase 8 — SvelteKit Application Services
+### Phase 8 — SvelteKit Application Services
 
 Move architecture interactions behind application services.
 
 For example:
-
+```
 getArchitectureContext()
 getDecision()
 getRelationships()
 searchArchitecture()
-
-Phase 9 — Remote Functions
+```
+### Phase 9 — Remote Functions
 
 Where sufficiently stable, expose these application services using SvelteKit remote functions.
 
 Do not move domain logic into the remote functions.
 
-Phase 10 — Observability
+### Phase 10 — Observability
 
 Introduce OpenTelemetry.
 
 Trace architecture operations and application performance.
 
-Phase 11 — SvelteKit 3
+### Phase 11 — SvelteKit 3
 
 Once SvelteKit 3 is stable and its migration guidance is mature:
-
+```
 SvelteKit 2
       ↓
 migration
       ↓
 SvelteKit 3
-
+```
 The architecture domain, LikeC4 adapter, scene graph, Babylon renderer and Kami implementation SHOULD require little or no redesign.
 
 ⸻
 
-33. CI Strategy
+## 33. CI Strategy
 
 CI SHOULD test both the production baseline and, once practical, the future framework baseline.
 
 Initially:
-
+```
 CI
  │
  ├── lint
@@ -1280,29 +1280,29 @@ CI
  ├── unit tests
  ├── build
  └── Docker build
-
+```
 Later, a non-blocking SvelteKit 3 compatibility job MAY be introduced:
-
+```
 CI
  │
  ├── SvelteKit stable       REQUIRED
  │
  └── SvelteKit next         ALLOWED TO FAIL
-
+```
 As SvelteKit 3 approaches stable maturity, this job can become increasingly important.
 
 This allows incompatibilities to be discovered before the actual migration.
 
 ⸻
 
-34. Dependency Policy
+## 34. Dependency Policy
 
 Framework dependencies SHOULD remain deliberately current.
 
 The project SHOULD avoid long-term pinning to an obsolete SvelteKit 2 release.
 
 Dependabot or Renovate SHOULD be considered for:
-
+```
 Svelte
 SvelteKit
 LikeC4
@@ -1311,12 +1311,12 @@ adapter-node
 Vite
 TypeScript
 OpenTelemetry
-
+```
 Major upgrades MUST remain explicit architectural decisions.
 
 ⸻
 
-35. Security
+## 35. Security
 
 Server-only concerns MUST remain server-side.
 
@@ -1337,12 +1337,12 @@ Every mutation MUST enforce authorization server-side.
 
 ⸻
 
-36. Future MCP Integration
+## 36. Future MCP Integration
 
 The separation introduced in this architecture deliberately enables future MCP support.
 
 For example:
-
+```
                        ┌── SvelteKit UI
                        │
 Architecture Services ─┼── CLI
@@ -1350,30 +1350,30 @@ Architecture Services ─┼── CLI
                        ├── MCP Server
                        │
                        └── AI Agent
-
+```
 An MCP tool could eventually expose:
-
+```
 architecture_get_element
 architecture_get_context
 architecture_get_dependencies
 architecture_get_decisions
 architecture_search
-
+```
 without duplicating architecture logic.
 
 ⸻
 
-37. Future AI Integration
+## 37. Future AI Integration
 
 The same boundary enables an AI assistant to answer questions such as:
-
+```
 Why does this component exist?
 Which ADR introduced this dependency?
 What depends on this container?
 Which decisions affect this system?
 Show the blast radius if this component changes.
 Which architectural decisions contradict this relationship?
-
+```
 The AI agent queries the architecture application layer.
 
 It does not need to scrape the Babylon scene.
@@ -1382,12 +1382,12 @@ This distinction is essential.
 
 ⸻
 
-38. Open Engineering Compatibility
+## 38. Open Engineering Compatibility
 
 Although this repository can function independently, its architecture SHOULD align with Open Engineering principles.
 
 In particular:
-
+```
 Architecture
       │
       ├── observable
@@ -1396,17 +1396,17 @@ Architecture
       ├── composable
       ├── machine-readable
       └── human-readable
-
+```
 The architecture model becomes more than visualization input.
 
 It becomes an operational source of architectural knowledge.
 
 ⸻
 
-39. Final Architecture
+## 39. Final Architecture
 
 The resulting system is:
-
+```
                          USERS
                            │
                            ▼
@@ -1446,10 +1446,10 @@ The resulting system is:
               OpenTelemetry
                     +
                  Docker
-
+```
 ⸻
 
-40. Final Decision
+## 40. Final Decision
 
 The implementation SHALL proceed with:
 
