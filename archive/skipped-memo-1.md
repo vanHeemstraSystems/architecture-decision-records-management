@@ -1,8 +1,8 @@
-# Skipped Memo — LikeC4 + Babylon Lite Architecture Explorer
+# Skipped Memo (1) — LikeC4 + Babylon Lite Architecture Explorer
 
 Status: Implementation vision  
 Target repository: vanHeemstraSystems/architecture-decision-records-management  
-Primary artifact: skipped-memo.md  
+Primary artifact: skipped-memo-1.md  
 
 ## 1. Purpose
 
