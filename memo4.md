@@ -71,8 +71,8 @@ SvelteKit surrounds these components as the application platform:
 │      ├── Kami                                            │
 │      │                                                   │
 │      └── Babylon.js                                      │
-│             ├── 2D                                      │
-│             └── 3D                                      │
+│             ├── 2D                                       │
+│             └── 3D                                       │
 │                                                          │
 │                typed application boundary                │
 │                         │                                │
@@ -80,7 +80,7 @@ SvelteKit surrounds these components as the application platform:
 │                         ▼                                │
 │  Server                                                  │
 │                                                          │
-│  Architecture Application Layer                         │
+│  Architecture Application Layer                          │
 │      │                                                   │
 │      ├── LikeC4 adapter                                  │
 │      ├── ADR repository                                  │
