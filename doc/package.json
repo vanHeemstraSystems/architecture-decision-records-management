@@ -1,0 +1,34 @@
+{
+  "name": "architecture-decision-records-management",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SvelteKit 3-ready ADR visualization platform (Memo 4 Phases 1-10)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.2.9",
+    "@sveltejs/kit": "^2.27.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@types/node": "^22.10.2",
+    "svelte": "^5.16.0",
+    "svelte-check": "^4.1.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.6",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.40.0"
+  },
+  "optionalDependencies": {
+    "@opentelemetry/api": "^1.9.0"
+  },
+  "engines": { "node": ">=20" }
+}
