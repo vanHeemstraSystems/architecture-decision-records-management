@@ -1,1 +1,1 @@
-export { views, view } from '$lib/remote/views.remote';
+export { view, views } from '$lib/remote/views.remote';
