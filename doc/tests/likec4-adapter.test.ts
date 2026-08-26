@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadFromLikeC4 } from '../src/lib/architecture/infrastructure/likec4/adapter';
+import { loadFromLikeC4Server as loadFromLikeC4 } from '../src/lib/architecture/infrastructure/likec4/adapter.server';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

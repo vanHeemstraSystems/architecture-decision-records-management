@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadFromAdr } from '../../src/lib/architecture/infrastructure/adr/adapter';
+import { loadFromAdrServer as loadFromAdr } from '../../src/lib/architecture/infrastructure/adr/adapter.server';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

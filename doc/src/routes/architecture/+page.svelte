@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { getArchitectureContext, type ArchitectureContext } from '$lib/architecture';
+	import { architectureContext } from '$lib/remote/architecture.remote';
+	import type { ArchitectureContext } from '$lib/architecture';
 	import { buildSceneGraph, type SceneGraph } from '$lib/scene';
 	import type { PageData } from './$types';
 
@@ -19,7 +20,7 @@
 
 	async function selectNode(id: string) {
 		selectedId = id;
-		context = id.startsWith('ADR-') ? null : await getArchitectureContext(id);
+		context = id.startsWith('ADR-') ? null : await architectureContext(id);
 	}
 </script>
 

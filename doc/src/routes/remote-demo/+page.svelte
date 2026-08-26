@@ -3,12 +3,9 @@
 	 * Remote functions demo — requires kit.experimental.remoteFunctions.
 	 * Falls back to direct application services if remote import fails at build.
 	 */
-	import {
-		getArchitecture,
-		getArchitectureContext,
-		getDecisions,
-		searchArchitecture
-	} from '$lib/architecture';
+	import { model, architectureContext } from '$lib/remote/architecture.remote';
+	import { decisions } from '$lib/remote/decisions.remote';
+	import { search } from '$lib/remote/search.remote';
 
 	let modelName = $state('');
 	let searchHits = $state(0);
@@ -17,12 +14,12 @@
 
 	$effect(() => {
 		(async () => {
-			const m = await getArchitecture();
+			const m = await model();
 			modelName = m.name;
-			decisionCount = (await getDecisions()).length;
-			const s = await searchArchitecture('babylon');
+			decisionCount = (await decisions()).length;
+			const s = await search('babylon');
 			searchHits = s.total;
-			const c = await getArchitectureContext('softwareSystem');
+			const c = await architectureContext('softwareSystem');
 			contextName = c?.element.name ?? '—';
 		})();
 	});

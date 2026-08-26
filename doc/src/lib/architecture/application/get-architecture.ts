@@ -1,8 +1,8 @@
 import type { ArchitectureModel } from '../domain/architecture';
 import type { ArchitectureDecision } from '../domain/decision';
 import { createEmptyArchitectureModel } from '../domain/architecture';
-import { loadFromLikeC4 } from '../infrastructure/likec4/adapter';
-import { loadFromAdr } from '../infrastructure/adr/adapter';
+import { loadFromLikeC4Server } from '../infrastructure/likec4/adapter.server';
+import { loadFromAdrServer } from '../infrastructure/adr/adapter.server';
 import { withSpan, SpanNames } from '$lib/observability';
 
 function mapDecisionRefsToFqn(
@@ -25,13 +25,13 @@ function mapDecisionRefsToFqn(
 export async function getArchitecture(): Promise<ArchitectureModel> {
 	return withSpan(SpanNames.MODEL_LOAD, { 'architecture.operation': 'getArchitecture' }, async (span) => {
 		try {
-			const model = await loadFromLikeC4();
+			const model = await loadFromLikeC4Server();
 			if (model) {
 				const adrDecisions = await withSpan(
 					SpanNames.ADR_LOAD,
 					{ 'architecture.operation': 'loadFromAdr' },
 					async (adrSpan) => {
-						const list = await loadFromAdr();
+						const list = await loadFromAdrServer();
 						adrSpan.setAttribute('architecture.adr.count', list.length);
 						adrSpan.setAttribute('architecture.adr.source', 'filesystem');
 						return list;
