@@ -22,7 +22,7 @@ describe('Application services', () => {
 	});
 
 	it('getElement / getChildren', async () => {
-		expect((await getElement('webUI'))?.name).toBe('Web UI');
+		expect((await getElement('softwareSystem.webUI'))?.name).toBe('Web UI');
 		expect((await getChildren('softwareSystem')).length).toBeGreaterThan(0);
 	});
 

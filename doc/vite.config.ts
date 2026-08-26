@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 
-export default defineConfig({
+const config: UserConfig & { test: { include: string[] } } = {
 	plugins: [sveltekit()],
 	ssr: {
 		external: ['@babylonjs/core']
@@ -12,4 +12,6 @@ export default defineConfig({
 	test: {
 		include: ['tests/**/*.{test,spec}.{js,ts}']
 	}
-});
+};
+
+export default defineConfig(config);
