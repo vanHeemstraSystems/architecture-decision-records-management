@@ -18,9 +18,11 @@
 		graph: SceneGraph | null;
 		/** Optional: resolve ADR by id (wire to getDecision) */
 		loadDecision?: (id: string) => Promise<Decision | null>;
+		/** Optional: notified whenever a mesh is picked (all ids, including ADRs) */
+		onSelect?: (id: string) => void;
 	}
 
-	let { graph, loadDecision }: Props = $props();
+	let { graph, loadDecision, onSelect }: Props = $props();
 
 	let canvasEl: HTMLCanvasElement;
 	let renderer: BabylonRenderer | null = null;
@@ -34,11 +36,12 @@
 		try {
 			status = 'Loading Babylon.js…';
 			const { createBabylonRenderer } = await import('$lib/renderer/babylon');
-			renderer = await createBabylonRenderer(canvasEl, '3d');
-			mode = '3d';
+			renderer = await createBabylonRenderer(canvasEl);
+			mode = renderer.getMode();
 			renderer.onSelect(async (id) => {
 				selectedId = id;
 				selectedDecision = null;
+				if (id) onSelect?.(id);
 				if (id?.startsWith('ADR-') && loadDecision) {
 					selectedDecision = await loadDecision(id);
 				}
@@ -46,7 +49,7 @@
 			status = 'Ready';
 			if (graph) {
 				await renderer.setGraph(graph);
-				status = `${graph.name} · ${graph.nodes.length} nodes · 3D`;
+				status = `${graph.name} · ${graph.nodes.length} nodes · ${mode.toUpperCase()}`;
 			}
 		} catch (err: any) {
 			errorMsg = err?.message ?? String(err);
