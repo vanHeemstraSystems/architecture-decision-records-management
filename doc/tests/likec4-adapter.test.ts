@@ -33,7 +33,7 @@ describe('loadFromLikeC4 — real DSL parse path', () => {
 		expect(viewIds.has('SystemContext')).toBe(true);
 		expect(viewIds.has('Containers')).toBe(true);
 
-		expect(model.decisions).toHaveLength(4);
+		expect(model.decisions).toHaveLength(3);
 
 		const elementIds = new Set(model.elements.map((e) => e.id));
 		for (const d of model.decisions) {

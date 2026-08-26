@@ -17,13 +17,11 @@ export const seedElements: ArchitectureElement[] = [
 	{ id: 'likec4Adapter', kind: 'container', name: 'LikeC4 Adapter', parent: 'softwareSystem', tags: ['TypeScript'], metadata: {} },
 	{ id: 'babylonRenderer', kind: 'container', name: 'Babylon.js Renderer', parent: 'softwareSystem', tags: ['Babylon.js'], metadata: {} },
 	{ id: 'adrParser', kind: 'container', name: 'ADR Parser', parent: 'softwareSystem', metadata: {} },
-	{ id: 'structurizrLite', kind: 'softwareSystem', name: 'Structurizr Lite', metadata: {} },
 	{ id: 'adrs', kind: 'softwareSystem', name: 'Architecture Decisions', metadata: {} }
 ];
 
 export const seedRelationships: ArchitectureRelationship[] = [
 	{ id: 'r1', source: 'user', target: 'softwareSystem', label: 'Explores', kind: 'uses' },
-	{ id: 'r2', source: 'softwareSystem', target: 'structurizrLite', label: 'Reads from', kind: 'uses' },
 	{ id: 'r3', source: 'softwareSystem', target: 'adrs', label: 'Indexes', kind: 'uses' },
 	{ id: 'r4', source: 'webUI', target: 'babylonRenderer', label: 'Renders via', kind: 'uses' },
 	{ id: 'r5', source: 'webUI', target: 'likec4Adapter', label: 'Resolves', kind: 'uses' },
@@ -60,16 +58,6 @@ export const seedDecisions: ArchitectureDecision[] = [
 		date: '2026-08-10',
 		markdown:
 			'# 3. LikeC4 as modelling engine\n\n## Status\nAccepted\n\n## Decision\nLikeC4 + canonical domain model.'
-	},
-	{
-		id: 'ADR-0004',
-		title: 'Deprecate Structurizr runtime',
-		status: 'deprecated',
-		relatedElements: ['structurizrLite'],
-		relatedDecisions: ['ADR-0003'],
-		date: '2026-08-15',
-		markdown:
-			'# 4. Deprecate Structurizr runtime\n\n## Status\nDeprecated\n\n## Decision\nLegacy import only; runtime uses LikeC4 + Babylon.'
 	}
 ];
 
@@ -77,7 +65,7 @@ export const seedViews: ArchitectureView[] = [
 	{
 		id: 'SystemContext',
 		name: 'System Context',
-		elements: ['user', 'softwareSystem', 'structurizrLite', 'adrs'],
+		elements: ['user', 'softwareSystem', 'adrs'],
 		kind: 'systemContext'
 	},
 	{
