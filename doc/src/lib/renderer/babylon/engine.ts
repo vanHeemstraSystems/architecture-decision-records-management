@@ -38,6 +38,7 @@ export async function createBabylonEngine(
 	dir.intensity = 0.5;
 
 	engine.runRenderLoop(() => {
+		if (!scene.activeCamera) return;
 		scene.render();
 	});
 
