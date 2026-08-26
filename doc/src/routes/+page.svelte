@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { getArchitecture } from '$lib/architecture';
+	import { model } from '$lib/remote/architecture.remote';
 	import { getTracingConfig } from '$lib/observability';
-	const modelP = getArchitecture();
+	const modelP = model();
 	const otel = getTracingConfig();
 </script>
 <svelte:head><title>ADR Management</title></svelte:head>

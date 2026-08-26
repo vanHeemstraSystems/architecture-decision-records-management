@@ -1,11 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import {
-		getArchitecture,
-		getArchitectureContext,
-		getDecision,
-		searchArchitecture
-	} from '$lib/architecture';
+	import { model, architectureContext } from '$lib/remote/architecture.remote';
+	import { decision } from '$lib/remote/decisions.remote';
+	import { search } from '$lib/remote/search.remote';
 	import {
 		getRecentSpans,
 		clearRecentSpans,
@@ -25,10 +22,10 @@
 	async function runDemo() {
 		status = 'Running…';
 		clearRecentSpans();
-		await getArchitecture();
-		await getArchitectureContext('softwareSystem');
-		await getDecision('ADR-0002');
-		await searchArchitecture('babylon');
+		await model();
+		await architectureContext('softwareSystem');
+		await decision('ADR-0002');
+		await search('babylon');
 		refresh();
 		status = `Recorded ${getRecentSpans().length} spans`;
 	}

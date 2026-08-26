@@ -1,12 +1,9 @@
 <script lang="ts">
-	import {
-		searchArchitecture,
-		getArchitectureContext,
-		getDecisions,
-		getViews,
-		type SearchResult,
-		type ArchitectureContext
-	} from '$lib/architecture';
+	import { architectureContext } from '$lib/remote/architecture.remote';
+	import { decisions } from '$lib/remote/decisions.remote';
+	import { views as viewsRemote } from '$lib/remote/views.remote';
+	import { search } from '$lib/remote/search.remote';
+	import type { SearchResult, ArchitectureContext } from '$lib/architecture';
 
 	let searchQuery = $state('babylon');
 	let searchResult = $state<SearchResult | null>(null);
@@ -16,16 +13,16 @@
 	let viewNames = $state<string[]>([]);
 
 	async function runSearch() {
-		searchResult = await searchArchitecture(searchQuery);
+		searchResult = await search(searchQuery);
 	}
 	async function loadContext() {
-		context = await getArchitectureContext(contextId);
+		context = await architectureContext(contextId);
 	}
 
 	$effect(() => {
 		(async () => {
-			decisionTitles = (await getDecisions()).map((d) => `${d.id}: ${d.title}`);
-			viewNames = (await getViews()).map((v) => v.name);
+			decisionTitles = (await decisions()).map((d) => `${d.id}: ${d.title}`);
+			viewNames = (await viewsRemote()).map((v) => v.name);
 			await runSearch();
 			await loadContext();
 		})();

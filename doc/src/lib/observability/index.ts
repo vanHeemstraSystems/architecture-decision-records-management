@@ -6,6 +6,7 @@
 
 export const SpanNames = {
 	MODEL_LOAD: 'architecture.model.load',
+	ADR_LOAD: 'architecture.adr.load',
 	CONTEXT_RESOLVE: 'architecture.context.resolve',
 	ELEMENT_GET: 'architecture.element.get',
 	CHILDREN_GET: 'architecture.children.get',

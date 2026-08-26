@@ -1,0 +1,45 @@
+specification {
+	element person
+	element softwareSystem
+	element container
+	relationship uses
+}
+
+model {
+	user = person 'User' 'Architect or stakeholder'
+
+	softwareSystem = softwareSystem 'Architecture Explorer' 'Kami-styled platform' {
+		webUI = container 'Web UI' {
+			technology 'SvelteKit'
+		}
+		likec4Adapter = container 'LikeC4 Adapter' {
+			technology 'TypeScript'
+		}
+		babylonRenderer = container 'Babylon.js Renderer' {
+			technology 'Babylon.js'
+		}
+		adrParser = container 'ADR Parser'
+	}
+
+	structurizrLite = softwareSystem 'Structurizr Lite'
+	adrs = softwareSystem 'Architecture Decisions'
+
+	user -> softwareSystem 'Explores'
+	softwareSystem -> structurizrLite 'Reads from'
+	softwareSystem -> adrs 'Indexes'
+	webUI -> babylonRenderer 'Renders via'
+	webUI -> likec4Adapter 'Resolves'
+	likec4Adapter -> adrParser 'Enriches'
+}
+
+views {
+	view SystemContext {
+		title 'System Context'
+		include user, softwareSystem, structurizrLite, adrs
+	}
+
+	view Containers of softwareSystem {
+		title 'Containers'
+		include *
+	}
+}
