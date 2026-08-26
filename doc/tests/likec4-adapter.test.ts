@@ -34,6 +34,13 @@ describe('loadFromLikeC4 — real DSL parse path', () => {
 		expect(viewIds.has('Containers')).toBe(true);
 
 		expect(model.decisions).toHaveLength(4);
+
+		const elementIds = new Set(model.elements.map((e) => e.id));
+		for (const d of model.decisions) {
+			for (const ref of d.relatedElements) {
+				expect(elementIds.has(ref)).toBe(true);
+			}
+		}
 	});
 
 	it('returns a non-null model even when workspacePath contains no DSL sources', async () => {
