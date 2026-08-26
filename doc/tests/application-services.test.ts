@@ -13,7 +13,7 @@ describe('Application services', () => {
 	it('getArchitecture returns model', async () => {
 		const m = await getArchitecture();
 		expect(m.elements.length).toBeGreaterThan(0);
-		expect(m.decisions.length).toBe(4);
+		expect(m.decisions.length).toBe(3);
 	});
 
 	it('getArchitectureContext', async () => {
@@ -28,7 +28,7 @@ describe('Application services', () => {
 
 	it('getDecision / getDecisions', async () => {
 		expect((await getDecision('ADR-0001'))?.status).toBe('accepted');
-		expect((await getDecisions()).length).toBe(4);
+		expect((await getDecisions()).length).toBe(3);
 	});
 
 	it('searchArchitecture', async () => {

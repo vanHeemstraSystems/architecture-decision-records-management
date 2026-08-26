@@ -1,23 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { getArchitecture, getArchitectureContext, type ArchitectureContext } from '$lib/architecture';
+	import { getArchitectureContext, type ArchitectureContext } from '$lib/architecture';
 	import { buildSceneGraph, type SceneGraph } from '$lib/scene';
+	import type { PageData } from './$types';
 
-	let graph = $state<SceneGraph | null>(null);
-	let context = $state<ArchitectureContext | null>(null);
-	let selectedId = $state<string | null>(null);
-	let loading = $state(true);
+	let { data }: { data: PageData } = $props();
 
-	onMount(async () => {
-		const model = await getArchitecture();
-		graph = buildSceneGraph(model, {
+	const graph: SceneGraph = $derived(
+		buildSceneGraph(data.model, {
 			includeDecisions: true,
 			includeDecisionLinks: true,
 			includeDecisionToDecision: true,
 			spatialGrouping: true
-		});
-		loading = false;
-	});
+		})
+	);
+
+	let context = $state<ArchitectureContext | null>(null);
+	let selectedId = $state<string | null>(null);
 
 	async function selectNode(id: string) {
 		selectedId = id;
@@ -28,36 +26,32 @@
 <svelte:head><title>Architecture</title></svelte:head>
 <h1>Architecture Explorer</h1>
 <p class="lead">Scene graph built from application services. Select a node for context.</p>
-{#if loading}
-	<p>Loading…</p>
-{:else if graph}
-	<div class="card">
-		<h2>{graph.name}</h2>
-		<p class="muted">{graph.nodes.length} nodes · {graph.edges.length} edges</p>
-		<ul>
-			{#each graph.nodes as n}
-				<li>
-					<button type="button" class:active={selectedId === n.id} onclick={() => selectNode(n.id)}>
-						<code>{n.id}</code> — {n.label}
-						<span class="tag">{n.kind}</span>
-					</button>
-				</li>
-			{/each}
-		</ul>
-	</div>
-	{#if context}
-		<aside class="card">
-			<h3>Context: {context.element.name}</h3>
-			{#if context.parent}<p>Parent: {context.parent.name}</p>{/if}
-			{#if context.children.length}
-				<p>Children: {context.children.map((c) => c.name).join(', ')}</p>
-			{/if}
-			<p>
-				Relationships: {context.relationships.length} · Related ADRs:
-				{context.decisions.length}
-			</p>
-		</aside>
-	{/if}
+<div class="card">
+	<h2>{graph.name}</h2>
+	<p class="muted">{graph.nodes.length} nodes · {graph.edges.length} edges</p>
+	<ul>
+		{#each graph.nodes as n}
+			<li>
+				<button type="button" class:active={selectedId === n.id} onclick={() => selectNode(n.id)}>
+					<code>{n.id}</code> — {n.label}
+					<span class="tag">{n.kind}</span>
+				</button>
+			</li>
+		{/each}
+	</ul>
+</div>
+{#if context}
+	<aside class="card">
+		<h3>Context: {context.element.name}</h3>
+		{#if context.parent}<p>Parent: {context.parent.name}</p>{/if}
+		{#if context.children.length}
+			<p>Children: {context.children.map((c) => c.name).join(', ')}</p>
+		{/if}
+		<p>
+			Relationships: {context.relationships.length} · Related ADRs:
+			{context.decisions.length}
+		</p>
+	</aside>
 {/if}
 <style>
 	h1 { margin-top: 0; }
