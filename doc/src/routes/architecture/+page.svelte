@@ -26,6 +26,7 @@
 	}
 
 	async function selectNode(id: string) {
+		console.debug('[architecture] selectNode', id); // TEMP: Wave 9 verification
 		if (id.startsWith('ADR-')) return;
 		if (id === contextId) return;
 		contextId = id;
