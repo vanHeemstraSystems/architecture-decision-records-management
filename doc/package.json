@@ -25,10 +25,15 @@
     "vitest": "^2.1.8"
   },
   "dependencies": {
-    "@babylonjs/core": "^7.40.0"
+    "@babylonjs/core": "^7.40.0",
+    "@likec4/core": "^1.59.2",
+    "@likec4/language-services": "^1.59.2",
+    "bundle-require": "^5.1.0"
   },
   "optionalDependencies": {
     "@opentelemetry/api": "^1.9.0"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
