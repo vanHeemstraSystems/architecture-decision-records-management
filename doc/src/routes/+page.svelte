@@ -7,10 +7,6 @@
 <svelte:head><title>ADR Management</title></svelte:head>
 <section class="hero">
 	<h1>Architecture Decision Records Management</h1>
-	<p class="lead">
-		Memo 4 Phases 1–10: SvelteKit · LikeC4 · Scene Graph · Babylon API ·
-		Application services · Remote functions · OpenTelemetry
-	</p>
 </section>
 <p>OTEL: <strong>{otel.enabled ? 'on' : 'off'}</strong> · <code>{otel.serviceName}</code></p>
 {#await modelP then model}
@@ -30,7 +26,6 @@
 <style>
 	.hero { margin-bottom: 2rem; }
 	h1 { font-size: 1.75rem; margin: 0 0 0.5rem; }
-	.lead { color: #8b98a5; }
 	.model {
 		background: #16181c; border: 1px solid #2f3336; border-radius: 12px;
 		padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;
