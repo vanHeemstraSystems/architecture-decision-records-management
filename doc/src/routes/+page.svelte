@@ -12,19 +12,7 @@
 		Application services · Remote functions · OpenTelemetry
 	</p>
 </section>
-<section class="status">
-	<h2>Implementation status</h2>
-	<ul>
-		<li>✅ Phase 1–2 — Foundation + domain model</li>
-		<li>✅ Phase 3 — LikeC4 adapter</li>
-		<li>✅ Phase 4 — Scene graph</li>
-		<li>✅ Phase 5–7 — Babylon 2D/3D API (expand renderer modules as needed)</li>
-		<li>✅ Phase 8 — Application services</li>
-		<li>✅ Phase 9 — Remote functions</li>
-		<li>✅ Phase 10 — OpenTelemetry-style tracing</li>
-	</ul>
-	<p>OTEL: <strong>{otel.enabled ? 'on' : 'off'}</strong> · <code>{otel.serviceName}</code></p>
-</section>
+<p>OTEL: <strong>{otel.enabled ? 'on' : 'off'}</strong> · <code>{otel.serviceName}</code></p>
 {#await modelP then model}
 	<section class="model">
 		<h2>{model.name}</h2>
@@ -43,7 +31,7 @@
 	.hero { margin-bottom: 2rem; }
 	h1 { font-size: 1.75rem; margin: 0 0 0.5rem; }
 	.lead { color: #8b98a5; }
-	.status, .model {
+	.model {
 		background: #16181c; border: 1px solid #2f3336; border-radius: 12px;
 		padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;
 	}

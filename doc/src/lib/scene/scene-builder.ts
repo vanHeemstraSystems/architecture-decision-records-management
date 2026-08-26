@@ -61,9 +61,9 @@ export function buildSceneGraph(
 		byParent.get(key)!.push(el);
 	}
 
-	const colWidth = 220;
-	const rowHeight = 140;
-	const depthStep = spatialGrouping ? 80 : 0;
+	const colWidth = 5;
+	const rowHeight = 4;
+	const depthStep = spatialGrouping ? 3 : 0;
 
 	const roots = byParent.get(undefined) ?? byParent.get('') ?? model.elements.filter((e) => !e.parent);
 
@@ -108,8 +108,8 @@ export function buildSceneGraph(
 	}
 
 	if (includeDecisions) {
-		const decisionStartX = 400;
-		const decisionStartY = -200;
+		const decisionStartX = 12;
+		const decisionStartY = -8;
 		model.decisions.forEach((d, i) => {
 			const x = decisionStartX + (i % 3) * colWidth;
 			const y = decisionStartY + Math.floor(i / 3) * rowHeight;

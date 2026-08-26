@@ -60,6 +60,7 @@ export async function createBabylonRenderer(
 	let nodes: Awaited<ReturnType<typeof createNodeMeshes>> | null = null;
 	let edges: Awaited<ReturnType<typeof createEdgeMeshes>> | null = null;
 	let picking: Awaited<ReturnType<typeof enablePicking>> | null = null;
+	const selectListeners: Array<(id: string | null) => void> = [];
 
 	async function setGraph(graph: SceneGraph) {
 		nodes?.dispose();
@@ -69,6 +70,7 @@ export async function createBabylonRenderer(
 		nodes = await createNodeMeshes(engineH.scene, graph.nodes);
 		edges = await createEdgeMeshes(engineH.scene, graph.edges, graph.nodes);
 		picking = await enablePicking(engineH.scene, nodes.meshes);
+		for (const cb of selectListeners) picking.onSelect(cb);
 		cameraH.fitToScene(graph);
 	}
 
@@ -84,6 +86,7 @@ export async function createBabylonRenderer(
 		},
 		getSelectedId: () => picking?.selectedId ?? null,
 		onSelect: (cb) => {
+			selectListeners.push(cb);
 			picking?.onSelect(cb);
 		},
 		dispose: () => {
