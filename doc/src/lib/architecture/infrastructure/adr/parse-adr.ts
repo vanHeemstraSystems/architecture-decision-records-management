@@ -31,6 +31,18 @@ function stripQuotes(value: string): string {
 	return value;
 }
 
+function parseInlineArray(raw: string | undefined): string[] {
+	if (!raw) return [];
+	const trimmed = raw.trim();
+	if (!trimmed.startsWith('[') || !trimmed.endsWith(']')) return [];
+	const inner = trimmed.slice(1, -1).trim();
+	if (!inner) return [];
+	return inner
+		.split(',')
+		.map((s) => stripQuotes(s.trim()).trim())
+		.filter((s) => s.length > 0);
+}
+
 function extractFrontmatter(source: string): { data: Record<string, string>; body: string } {
 	const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(source);
 	if (!match) return { data: {}, body: source };
@@ -88,8 +100,8 @@ export function parseAdr(filename: string, source: string): ArchitectureDecision
 		title,
 		status,
 		markdown: body.trim(),
-		relatedElements: [],
-		relatedDecisions: [],
+		relatedElements: parseInlineArray(data.relatedElements),
+		relatedDecisions: parseInlineArray(data.relatedDecisions),
 		date
 	};
 }
