@@ -66,4 +66,36 @@ describe('parseAdr', () => {
 		const d = parseAdr('README.md', '# 0. Nothing\n');
 		expect(d.id).toBe('ADR-0000');
 	});
+
+	it('extracts relatedElements and relatedDecisions from inline array frontmatter', () => {
+		const src = `---\nstatus: accepted\nrelatedElements: [webUI, babylonRenderer]\nrelatedDecisions: [ADR-0001]\n---\n\n# 12. Linked decision\n`;
+		const d = parseAdr('0012-linked-decision.md', src);
+		expect(d.relatedElements).toEqual(['webUI', 'babylonRenderer']);
+		expect(d.relatedDecisions).toEqual(['ADR-0001']);
+	});
+
+	it('accepts quoted values inside the inline array', () => {
+		const src = `---\nrelatedElements: ['webUI', "babylonRenderer"]\n---\n\n# 13. Quoted\n`;
+		const d = parseAdr('0013-quoted.md', src);
+		expect(d.relatedElements).toEqual(['webUI', 'babylonRenderer']);
+	});
+
+	it('returns empty arrays for an empty inline array', () => {
+		const src = `---\nrelatedElements: []\nrelatedDecisions: []\n---\n\n# 14. Empty\n`;
+		const d = parseAdr('0014-empty.md', src);
+		expect(d.relatedElements).toEqual([]);
+		expect(d.relatedDecisions).toEqual([]);
+	});
+
+	it('trims whitespace and drops empty entries', () => {
+		const src = `---\nrelatedElements: [ webUI ,  babylonRenderer  , ]\n---\n\n# 15. Whitespace\n`;
+		const d = parseAdr('0015-whitespace.md', src);
+		expect(d.relatedElements).toEqual(['webUI', 'babylonRenderer']);
+	});
+
+	it('defaults to empty arrays when the fields are absent (regression guard)', () => {
+		const d = parseAdr('0007-adopt-widget-frobber.md', WELL_FORMED);
+		expect(d.relatedElements).toEqual([]);
+		expect(d.relatedDecisions).toEqual([]);
+	});
 });
